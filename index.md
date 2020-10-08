@@ -1,4 +1,4 @@
-## Interaction Deisgn working environment
+## Interaction Design working environment
 
 Link zur [Aufgabe 1](Beispiel/Ich.jpg) 
 
