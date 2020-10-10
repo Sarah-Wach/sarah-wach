@@ -17,7 +17,7 @@ If you want to have a closer look at what I've done bevore, here is a link to my
 
 > Weakness
 
-My (self-determined) focus was already in my studies, designing new products and solutions, and learning from the experiences of others. I already had some insights into programming, but somehow the spark never flew. 
+My (self-determined) focus was already in my studies, designing new products and solutions, and learning from the experiences of others. I already had some insights into programming, but somehow the spark never flew. So far I've gained insights into different programming languages. I have already worked with Framer and CoffeeScript. I have also worked on several projects with Arduinos and Raspberries. This was more fun than producing software solutions.
 
 > Opportunities
 
