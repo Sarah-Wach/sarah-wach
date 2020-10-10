@@ -4,9 +4,13 @@
 
 Find my solution to Task # 00 [*here*](SWOT.md).
 
+* * *
+
 ### Design the User Experience Okt 14
 
 > currently empty 
+
+* * *
 
 ### Prototype Ideas Okt 21
 
