@@ -21,6 +21,6 @@ My (self-determined) focus was already in my studies, designing new products and
 
 > Opportunities
 
-
+I would be particularly interested in different design principles and methods to reach the goal faster and more orderly. The human being and his experiences and different perceptions and reactions to situations fascinate me. And I think you can never learn enough about that. During testings and interviews, I have always been able to take something new with me. Most of the time, all these new insights flowed directly into new ideas and concepts. Different styles are also always exciting. Creating guides for them or designing a project according to procedures or guidelines can be interesting. 
 
 > Threats (Risks)
