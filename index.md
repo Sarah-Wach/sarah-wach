@@ -1,8 +1,13 @@
-## Interaction Design working environment
+# Interaction Design working environment
+
+### KickOff Meeting Okt 07
 
 Find my solution to Task # 00 [*here*](SWOT.md).
 
-This is my selected presentation [**Value Proposition Canvas**](VPC.md)
+### Design the User Experience Okt 14
 
-### KickOff Meeting
-![firstClass](assets/logo.png)
+> currently empty 
+
+### Prototype Ideas Okt 21
+
+This is my selected presentation [**Value Proposition Canvas**](VPC.md)
