@@ -1,6 +1,6 @@
 ## Interaction Design working environment
 
-Link zur [Aufgabe 1](Beispiel/Ich.jpg) 
+Link to [Task # 00](SWOT.md) 
 
 This is my selected presentation topic: **Value Proposition Canvas**
 > This will show up soon
