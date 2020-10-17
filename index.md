@@ -9,7 +9,6 @@ Find my solution to Task # 00 [*here*](SWOT.md).
 ### Design the User Experience Okt 14
 
 Find my solution to Task # 01 [*here*](wallet.md).
-And my intro video for the topic value proposition canvas [*here*](VPC.md).
 
 * * *
 

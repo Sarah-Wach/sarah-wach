@@ -1,4 +1,5 @@
 ## Value Propositon Canvas
 
-<video controls="controls">
-  <source type="video/mp4" src="assets/ValuePropositionCanvas_Movie.m4v"></source></video>
+<video width="contain" height="330" controls>
+  <source src="assets/ValuePropositionCanvas_Movie.m4v" type="video/mp4">
+</video>
