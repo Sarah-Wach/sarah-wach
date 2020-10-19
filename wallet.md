@@ -14,6 +14,7 @@ The Wallet Project is a “quick wash” proposed by the d.school of Hasso Pattn
 </style>
   <div class="pic"></div>
 
+
 ### 1. Empathize
 
 I collaborated with Luna during this Design Thinking circle. 
@@ -54,7 +55,6 @@ These are my meaningful questions to understand her thoughts while interacting w
 * Have you ever lost your wallet?
     * Only for a few minutes, because I forgot it in an IKEA, but I got it back quickly :dizzy:
 
-    
 
 ### 2. Define
 
@@ -74,6 +74,7 @@ Used method is the crazy 8
 
 ![crazy8](assets/crazy8.png)
 
+
 ### 4. Prototype
 
 The Prototype contains a combination of several ideas coming from the crazy 8.
@@ -83,7 +84,15 @@ The Prototype contains a combination of several ideas coming from the crazy 8.
 
 
 ### 5. Test
+The suggestions for the perfect wallet were completely accepted, so I decided to design the prototype according to these specifications. I chose Tyvek for the material because it contains all the positive features I have planned for my wallet. It is tear- and splash-proof, super thin and light. The material Tyvek is mainly known from the company Paprcuts. Another idea would be to add a tracker to be able to find the wallet when needed. This could be solved with the help of Bluetooth, for example. This would make it possible to see the last place where the last connection was made.
+
 
 ### 6. Prototype Iteration
 
+The final prototype consists of two compartments: a very thin card compartment, which contains space for several cards. And a spacious zippered section to store many smaller things. Furthermore, a hand strap is attached to the side. There the hand can be put through to carry the wallet like a handbag. If desired a chain can be attached as a shoulder strap. Thus the user becomes more mobile and the wallet is never lost. The large section contains a lot of space so that the cell phone can also be inserted.
 
+
+![crazy8](assets/wallet_complete.png)
+![crazy8](assets/wallet_detail_cards.png)
+![crazy8](assets/wallet_hand.png)
+![crazy8](assets/wallet_not_attatched.png)
