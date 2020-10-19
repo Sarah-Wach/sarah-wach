@@ -60,11 +60,23 @@ These are my meaningful questions to understand her thoughts while interacting w
 
 __Top Findings__
 
-
+1. Big, not expensive, smooth, disinfectable
+2. Always full, also coins are contained
+3. Size: Doesn't matter, it does not fit in the trouser pocket
+4. Should be carryable without a bag
+5. Because of point four, a tracking system or something like that could be useful
+6. Needs much space for all of her stuff
+7. The smartphone should fit into it
 
 ### 3. Ideate
 
+Used method is the crazy 8
+
+![crazy8](assets/crazy8.png)
+
 ### 4. Prototype
+
+The Prototype contains 
 
 ### 5. Test
 
