@@ -12,8 +12,20 @@ The Wallet Project is a “quick wash” proposed by the d.school of Hasso Pattn
   margin-bottom: 20px;
 }
 </style>
-<div>
   <div class="pic"></div>
-  <main>
-  </main>
-</div>
+
+### 1. Empathize
+
+
+
+### 2. Define
+
+### 3. Ideate
+
+### 4. Prototype
+
+### 5. Test
+
+### 6. Prototype Iteration
+
+
