@@ -48,7 +48,7 @@ These are my meaningful questions to understand her thoughts while interacting w
     * To pay
     * for shopping
     * always takes it with her, never goes out without it
-    * At doctor's appointments
+    * At a doctor's appointments
     * To the library
 
 * Have you ever lost your wallet?
@@ -76,7 +76,11 @@ Used method is the crazy 8
 
 ### 4. Prototype
 
-The Prototype contains 
+The Prototype contains a combination of several ideas coming from the crazy 8.
+
+![crazy8](assets/4_prototype_views.png)
+![crazy8](assets/4_prototype_Perspective.png)
+
 
 ### 5. Test
 
