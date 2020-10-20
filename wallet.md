@@ -1,6 +1,6 @@
 ## The Wallet Project
 
-The Wallet Project is a “quick wash” proposed by the d.school of Hasso Pattner’s Institute of Design at Standford to practise each phase of the Design Thinking approach.
+The Wallet Project is a “quick wash” proposed by the d.school of Hasso Plattner’s Institute of Design at Standford to practise each phase of the Design Thinking approach.
 
 <style>
 .pic {
@@ -30,7 +30,7 @@ These are my meaningful questions to understand her thoughts while interacting w
     * The smartphone doesn't fit into the wallet, even it is so big
     * Many coins in it
     
-* What does your wallet contain?  (It's ok to give me some examples :blush:)
+* What does your wallet contain?  (It's ok to give me some examples ☺️)
     * EC cards/ Visa Card
     * ID card
     * many other cards
@@ -53,7 +53,7 @@ These are my meaningful questions to understand her thoughts while interacting w
     * To the library
 
 * Have you ever lost your wallet?
-    * Only for a few minutes, because I forgot it in an IKEA, but I got it back quickly :dizzy:
+    * Only for a few minutes, because I forgot it in an IKEA, but I got it back quickly ✨
 
 
 ### 2. Define
@@ -70,14 +70,14 @@ __Top Findings__
 
 ### 3. Ideate
 
-Used method is the crazy 8
+Used method is the Crazy 8
 
 ![crazy8](assets/crazy8.png)
 
 
 ### 4. Prototype
 
-The Prototype contains a combination of several ideas coming from the crazy 8.
+The Prototype contains a combination of several ideas coming from the Crazy 8.
 
 ![crazy8](assets/4_prototype_views.png)
 ![crazy8](assets/4_prototype_Perspective.png)
