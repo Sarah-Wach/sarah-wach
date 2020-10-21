@@ -5,4 +5,4 @@
 Draft your initial concept with pen and paper to cover all relevant aspects. The client should be able to present the data, discuss and drill down to specific information. Document this low-fid prototype with some photos/scans.
 
 
-[*Download everything here*](assest/DokuGuiLow.pdf)
+[*Click here*](assest/DokuGuiLow.pdf)
