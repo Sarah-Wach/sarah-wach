@@ -1,17 +1,37 @@
-# Interaction Design working environment
+# Interaction Design
 
-### KickOff Meeting Okt 07
+### #04 Design Transformation Challenge Okt 21
 
-Find my solution to Task # 00 [*here*](SWOT.md).
-
-* * *
-
-### Design the User Experience Okt 14
-
-Find my solution to Task # 01 [*here*](wallet.md).
+[*Design Transformation Challenge*](transformation.md).
 
 * * *
 
-### Prototype Ideas Okt 21
+### #03 Responsive Design Challenge Okt 21
 
-This is my selected presentation [**Value Proposition Canvas**](VPC.md)
+[*Responsive Design Challenge*](responsive.md).
+
+* * *
+
+### #02 Initial GUI Prototyping Okt 21
+
+[*Low-fid*](GUI_low.md).
+[*Med-fid/High-fid*](GUI_mid.md).
+
+* * *
+
+### #01 Design the User Experience Okt 14
+
+ [*The Wallet Project*](wallet.md).
+
+* * *
+
+### #01Prototype Ideas Okt 21
+
+[*Value Proposition Canvas*](VPC.md)
+
+* * *
+### #00 KickOff Meeting Okt 07
+
+[*SWOT*](SWOT.md).
+
+

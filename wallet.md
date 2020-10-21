@@ -24,13 +24,13 @@ These are my meaningful questions to understand her thoughts while interacting w
 * __Please describe at the beginning how your wallet looks and feels.__
     * It's pink, rectangle-shaped, a usual women's wallet, not that expensive, smooth material, easy to disinfect 
     
-* What is the best and the worst thing about your wallet?
+* __What is the best and the worst thing about your wallet?__
     * good: lots of storage space
     * to improve: the size is irrelevant since it does not fit in the trouser pocket
     * The smartphone doesn't fit into the wallet, even it is so big
     * Many coins in it
     
-* What does your wallet contain?  (It's ok to give me some examples ☺️)
+* __What does your wallet contain?__  (It's ok to give me some examples ☺️)
     * EC cards/ Visa Card
     * ID card
     * many other cards
@@ -38,21 +38,21 @@ These are my meaningful questions to understand her thoughts while interacting w
     * donation cards
     * Medicine
     
-* Where is it stored?
+* __Where is it stored?__
     * Hold in Hand (does not like purses)
     * When she leaves the house: wallet, keys, cell phone are always with her
     
-* Which payment methods do you use most?
+* __Which payment methods do you use most?__
     * rather with card
 
-* When do you use the wallet?
+* __When do you use the wallet?__
     * To pay
     * for shopping
     * always takes it with her, never goes out without it
     * At a doctor's appointments
     * To the library
 
-* Have you ever lost your wallet?
+* __Have you ever lost your wallet?__
     * Only for a few minutes, because I forgot it in an IKEA, but I got it back quickly ✨
 
 
