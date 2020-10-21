@@ -15,6 +15,7 @@
 ### #02 Initial GUI Prototyping Okt 21
 
 [*Low-fid*](GUI_low.md).
+
 [*Med-fid/High-fid*](GUI_mid.md).
 
 * * *
