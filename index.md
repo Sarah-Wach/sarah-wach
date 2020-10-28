@@ -16,7 +16,7 @@
 
 [*Low-fid*](GUI_low.md).
 
-[*Med-fid/High-fid*](https://xd.adobe.com/view/0bc03665-f9a1-4ebc-b119-8edf7207d2da-5e93/).
+[*Med-fid/High-fid*](https://xd.adobe.com/view/7de112d8-ae48-4e2c-9b42-0384df6460e8-28b2/?fullscreen&hints=off).
 
 * * *
 
