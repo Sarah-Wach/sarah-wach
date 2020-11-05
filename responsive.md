@@ -17,6 +17,7 @@ Thereby I tried to transform as much as possible from my first drafts to the tab
 
 ![tablet_scribble](assets/responsive_scribble_Tablet.png)
 
+I used a screen format for the iPad Pro 12,9" (1366 x 1024).
 In principle, the tablet should have the same content as the large screen in its functions. I have added another dashboard view for easier usability and readability. Now you can choose between the graphics and boxes. 
 The displayed information is still available on the tablet. I made sure that the graphics are displayed as large as possible. The boxes show the respective actual state of the individual values in whole numbers and the improvement or deterioration compared to the previous day. The most important information can now be viewed at a glance.
 For a better overview of the individual plants, they are displayed in the diagram view, each one individually as line diagrams. Again, all at once or only selected plants can be viewed. 
@@ -31,3 +32,10 @@ For a more detailed view, you can select the relevant plant. Then all four value
 
 ![watch_style](assets/watch.png)
 
+I used a screen format for the apple watch with 44mm (184 x 224).
+My first intention was to start directly with the design in xd, but then I made sketches again to find out the most important points. The functions here should focus on the most important information because there is not enough space on the small display for all the details from the previous designs. The numbers and graphics seemed to me to be the most important. Then I transferred these key features. 
+Therefore I created a minimalistic design of the dashboard. It should have three boxes with graphics that can be called up individually for the details.
+
+![watch_style](assets/responsive_scribble_watch.png)
+
+During the transfer of my sketches in xd, I found out that the rectangular boxes with the line diagrams are not suitable because of their size. Therefore I reduced the dashboard to three buttons. If you click on a plant you get to the detail view. There each value is shown in a diagram. 
