@@ -72,15 +72,15 @@ __Top Findings__
 
 Used method is the Crazy 8
 
-![crazy8](assets/crazy8.png)
+![crazy8](/assets/crazy8.png)
 
 
 ### 4. Prototype
 
 The Prototype contains a combination of several ideas coming from the Crazy 8.
 
-![crazy8](assets/4_prototype_views.png)
-![crazy8](assets/4_prototype_Perspective.png)
+![crazy8](/assets/4_prototype_views.png)
+![crazy8](/assets/4_prototype_Perspective.png)
 
 
 ### 5. Test
@@ -92,7 +92,7 @@ The suggestions for the perfect wallet were completely accepted, so I decided to
 The final prototype consists of two compartments: a very thin card compartment, which contains space for several cards. And a spacious zippered section to store many smaller things. Furthermore, a hand strap is attached to the side. There the hand can be put through to carry the wallet like a handbag. If desired a chain can be attached as a shoulder strap. Thus the user becomes more mobile and the wallet is never lost. The large section contains a lot of space so that the cell phone can also be inserted.
 
 
-![crazy8](assets/wallet_complete.png)
-![crazy8](assets/wallet_detail_cards.png)
-![crazy8](assets/wallet_hand.png)
-![crazy8](assets/wallet_not_attatched.png)
+![crazy8](/assets/wallet_complete.png)
+![crazy8](/assets/wallet_detail_cards.png)
+![crazy8](/assets/wallet_hand.png)
+![crazy8](/assets/wallet_not_attatched.png)
