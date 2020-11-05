@@ -8,4 +8,80 @@ the next step is to bring your concept on a higher visual and interactive level 
 [*Click here to view the xd prototype*](https://xd.adobe.com/view/7de112d8-ae48-4e2c-9b42-0384df6460e8-28b2/?fullscreen&hints=off)
 
 
-Nach dem das grobe Layout mit Stift und Papier fertig war, habe ich angefangen in Adobe XD einen ersten groben Entwurf aufzubauen. 
+The next step is to bring the concept to a higher visual and interactive level.
+To complete this task, I used Adobe XD for the first time. Normally I use Sketch, but this time I wanted to use a different program because I was interested in the prototype function of XD.
+I started with the screen, on which a full-screen graphic can be seen. In the settings, you can change the plants and the time frame to be displayed. The last update and the complete Excel file can be viewed here.
+In the top row, the selected plants and the selected time frame are displayed. The buttons below can be used to select the information displayed in the graph.
+
+<style>
+.pic {
+  height: 50vh;
+  background-image: url("assets/mid_settings.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+</style>
+  <div class="pic"></div>
+
+Next, I implemented the Excel file. I made sure that it was easy to read, for example by aligning all numbers on the right side. In this way, large numbers can be identified more clearly, because you can see immediately if a value is larger or smaller.
+
+
+<style>
+.pic {
+  height: 50vh;
+  background-image: url("assets/mid_excel.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+</style>
+  <div class="pic"></div>
+
+To be able to put several graphics together on one page, they had to be scaled down. There are three possible sizes, one full-size, one with half the height, and a small one.
+
+<style>
+.pic {
+  height: 50vh;
+  background-image: url("assets/mid_grafics.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+</style>
+  <div class="pic"></div>
+
+
+To get a better differentiation, I added some color. At first only blue, but this made it harder to separate the different categories. After that, each of the four categories got its color. I have chosen light, neutral colors, which are used for most of the surface. White and grey are good for creating a neutral, professional environment. Where there is a lot of white, the eye can come to rest.
+
+<style>
+.pic {
+  height: 50vh;
+  background-image: url("assets/mid_blue_grafics.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+</style>
+  <div class="pic"></div>
+
+
+When multiple works are selected, the display changes from a filled line chart to a simple line chart. This is because the readability would decrease with the filled-lines. 
+For the final prototype, I reworked the color once more.
+The blue tones here stand for calm, calmness and are often used for trustworthy institutions. Blue is directly associated with trust and professionalism and is therefore well suited for data visualization. Violet is both warm and cold and combines attributes of red (often negative or dangerous) with blue (calm and calmness). This ensures good color differentiation. Green is associated with growth and in the USA also with money and success. Green also brings a sense of visual balance and as a result a calming and relaxing influence. Yellow-green may indicate illness, cowardice, discord and jealousy.
+
+<style>
+.pic {
+  height: 50vh;
+  background-image: url("assets/mid_final_grafics_style.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+</style>
+  <div class="pic"></div>
