@@ -21,6 +21,25 @@
 </style>
   <div class="pic"></div>
 
+At first, I made some pen and paper sketches to generate my first ideas. 
+Thereby I tried to transform as much as possible from my first drafts to the tablet format. 
+
+<style>
+.pic {
+  height: 50vh;
+  background-image: url("assets/responsive_scribble_Tablet.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+</style>
+  <div class="pic"></div>
+
+In principle, the tablet should have the same content as the large screen in its functions. I have added another dashboard view for easier usability and readability. Now you can choose between the graphics and boxes. 
+The displayed information is still available on the tablet. I made sure that the graphics are displayed as large as possible. The boxes show the respective actual state of the individual values in whole numbers and the improvement or deterioration compared to the previous day. The most important information can now be viewed at a glance.
+For a better overview of the individual plants, they are displayed in the diagram view, each one individually as line diagrams. Again, all at once or only selected plants can be viewed. 
+For a more detailed view, you can select the relevant plant. Then all four values appear as single graphics. Also in this view, the number of displayed values can be changed.
 
 
 ### Smartwatch Version
