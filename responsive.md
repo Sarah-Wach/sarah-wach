@@ -9,13 +9,13 @@
 
 [*Adobe XD Tablet Mid-fid/High-fid prototype*](https://xd.adobe.com/view/ed568414-a60c-498c-a84f-d81c6fc47486-b805/)
 
-![alt text]("assets/Tablet_mockup.png")
+![tablet_style]("assets/Tablet_mockup.png")
 
 
 At first, I made some pen and paper sketches to generate my first ideas. 
 Thereby I tried to transform as much as possible from my first drafts to the tablet format. 
 
-![alt text]("assets/responsive_scribble_Tablet.png")
+![tablet_scribble]("assets/responsive_scribble_Tablet.png")
 
 In principle, the tablet should have the same content as the large screen in its functions. I have added another dashboard view for easier usability and readability. Now you can choose between the graphics and boxes. 
 The displayed information is still available on the tablet. I made sure that the graphics are displayed as large as possible. The boxes show the respective actual state of the individual values in whole numbers and the improvement or deterioration compared to the previous day. The most important information can now be viewed at a glance.
@@ -29,5 +29,5 @@ For a more detailed view, you can select the relevant plant. Then all four value
 
 [*Adobe XD Smartwatch Mid-fid/High-fid prototype*](https://xd.adobe.com/view/2defd343-4e31-4c40-98d1-87ebf83a927f-78bc/)
 
-![alt text]("assets/watch.png")
+![watch_style]("assets/watch.png")
 
