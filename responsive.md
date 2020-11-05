@@ -49,14 +49,3 @@ For a more detailed view, you can select the relevant plant. Then all four value
 [*Adobe XD Smartwatch Mid-fid/High-fid prototype*](https://xd.adobe.com/view/2defd343-4e31-4c40-98d1-87ebf83a927f-78bc/)
 
 
-<style>
-.pic {
-  height: 50vh;
-  background-image: url("assets/watch.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 20px;
-}
-</style>
-  <div class="pic"></div>
