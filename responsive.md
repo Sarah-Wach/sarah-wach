@@ -39,3 +39,4 @@ Therefore I created a minimalistic design of the dashboard. It should have three
 ![watch_style](assets/responsive_scribble_watch.png)
 
 During the transfer of my sketches in xd, I found out that the rectangular boxes with the line diagrams are not suitable because of their size. Therefore I reduced the dashboard to three buttons. If you click on a plant you get to the detail view. There each value is shown in a diagram. 
+
