@@ -13,19 +13,19 @@ To complete this task, I used Adobe XD for the first time. Normally I use Sketch
 I started with the screen, on which a full-screen graphic can be seen. In the settings, you can change the plants and the time frame to be displayed. The last update and the complete Excel file can be viewed here.
 In the top row, the selected plants and the selected time frame are displayed. The buttons below can be used to select the information displayed in the graph.
 
-![watch_style](/assets/mid_settings.png)
+![watch_style](/assets/mid_settings.jpg)
 
 Next, I implemented the Excel file. I made sure that it was easy to read, for example by aligning all numbers on the right side. In this way, large numbers can be identified more clearly, because you can see immediately if a value is larger or smaller.
 
-![watch_style](/assets/mid_excel.png)
+![watch_style](/assets/mid_excel.jpg)
 
 To be able to put several graphics together on one page, they had to be scaled down. There are three possible sizes, one full-size, one with half the height, and a small one.
 
-![watch_style](/assets/mid_grafics.png)
+![watch_style](/assets/mid_grafics.jpg)
 
 To get a better differentiation, I added some color. At first only blue, but this made it harder to separate the different categories. After that, each of the four categories got its color. I have chosen light, neutral colors, which are used for most of the surface. White and grey are good for creating a neutral, professional environment. Where there is a lot of white, the eye can come to rest.
 
-![watch_style](/assets/mid_blue_grafics.png)
+![watch_style](/assets/mid_blue_grafics.jpg)
 
 When multiple works are selected, the display changes from a filled line chart to a simple line chart. This is because the readability would decrease with the filled-lines. 
 For the final prototype, I reworked the color once more.
