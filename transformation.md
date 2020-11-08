@@ -15,5 +15,7 @@ Material specifies many components for the UI design. For example, there is the 
 For the menu on the side I used a navigation drawer, it provides access to destinations in the app. It is identifiable as a navigation menu because of the placement and list-style content. It is also organized and the content is contextual to the content on the screen. The colorful circles before each bulletpoint in the menu belong to the color-matched diagramms on the screen. 
 
 Each of the diagrams has a data label that appears when the mouse hovers over it. The diagrams have their color, which reflects each value accordingly. 
+
 ![color](/assets/vergleich_colors.png)
-All colors are based on the material color system. The meaning of the colors should be the same, I just adjusted the right shade of material.
+
+All colors are based on the material color system. The meaning of the colors are the same, I just adjusted the right shade of material.
