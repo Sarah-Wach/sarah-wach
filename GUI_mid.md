@@ -2,14 +2,14 @@
 
 ### 1. Mid-fid/High-fid Prototype
 
-the next step is to bring your concept on a higher visual and interactive level (on content level it’s going to be placeholder data of course). You can use any GUI prototyping tool (I recomment Axure, proto.io, figma or Adobe XD, but go ahead and make your own experience). Your final prototype is a browser-based, interactive application (means, no EXE for instance), depending on your tool you need to export/deploy.
+the next step is to bring your concept on a higher visual and interactive level (on content level it’s going to be placeholder data of course). You can use any GUI prototyping tool (I recomment Axure, proto.io, figma or Adobe xd, but go ahead and make your own experience). Your final prototype is a browser-based, interactive application (means, no EXE for instance), depending on your tool you need to export/deploy.
 
 
 [*Click here to view the xd prototype*](https://xd.adobe.com/view/7de112d8-ae48-4e2c-9b42-0384df6460e8-28b2/?fullscreen&hints=off)
 
 
 The next step is to bring the concept to a higher visual and interactive level.
-To complete this task, I used Adobe XD for the first time. Normally I use Sketch, but this time I wanted to use a different program because I was interested in the prototype function of XD.
+To complete this task, I used Adobe xd for the first time. Normally I use Sketch, but this time I wanted to use a different program because I was interested in the prototype function of xd.
 I started with the screen, on which a full-screen graphic can be seen. In the settings, you can change the plants and the time frame to be displayed. The last update and the complete Excel file can be viewed here.
 In the top row, the selected plants and the selected time frame are displayed. The buttons below can be used to select the information displayed in the graph.
 
