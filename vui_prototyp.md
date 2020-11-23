@@ -62,7 +62,6 @@ This is the first try with the latest version of the prototype.
 
 If someone wants to try the prototype for himself: Download the App ProtoPie from the App Store or PlayStore and test it there. On the computer, the voice input and voice output seem not to work in every browser. (The prototype is designed for the dimensions of an iPhone XR or 11).
 
-[*Click here to view the voice user interface prototyp in Protopie*]()
 <a href="VUI_Prototyp.pie" download>Protopie Download</a>
 
 Here you can see how it works:
