@@ -30,7 +30,7 @@ All colors are based on the material color system. The meaning of the colors are
 
 
 
-The final Screen:
+## The final Screen:
 
 <p>
   <a href="/assets/Material_DashboardNEWcolor.png" title="final">
