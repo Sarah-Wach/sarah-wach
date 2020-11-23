@@ -62,7 +62,7 @@ Before I finished the complete prototype, I tested it with different end devices
 
 ***
 
-## This is the final prototype as a video and for you to try out
+## This is the final prototype
 
 If someone wants to try the prototype for himself: Download the App ProtoPie from the App Store or PlayStore and test it there. On the computer, the voice input and voice output seem not to work in every browser. (The prototype is designed for the dimensions of an iPhone XR or 11).
 
