@@ -30,3 +30,9 @@ This is the first try with the latest version of the prototype.
 <video width="contain" height="320" controls>
   <source src="assets/vui_short.mp4" type="video/mp4">
 </video>
+
+<p>
+  <a href="/assets/vui_orange-logos.png" title="Test image">
+    <img src="/assets/vui_orange-logos.png" alt="homepage" />
+  </a>
+</p>
