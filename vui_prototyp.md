@@ -56,3 +56,15 @@ This is the first try with the latest version of the prototype.
 </video>
 
 
+***
+
+## This is the final prototype as a video and for you to try out
+
+If someone wants to try the prototype for himself: Download the App ProtoPie from the App Store or PlayStore and test it there. On the computer, the voice input and voice output seem not to work in every browser. (The prototype is designed for the dimensions of an iPhone XR or 11).
+
+[*Click here to view the voice user interface prototyp in Protopie*](https://cloud.protopie.io/p/f02023331e?ui=false&mockup=false&touchHint=true&scaleToFit=false&cursorType=touch)
+
+
+<video width="contain" height="320" controls>
+  <source src="assets/vuiUserText.mp4" type="video/mp4">
+</video>
