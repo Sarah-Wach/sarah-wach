@@ -19,3 +19,9 @@ Each of the diagrams has a data label that appears when the mouse hovers over it
 ![color](/assets/vergleich_colors.png)
 
 All colors are based on the material color system. The meaning of the colors are the same, I just adjusted the right shade of material.
+
+
+
+The final Screen:
+
+![final](/assets/Material_DashboardNEWcolor.png)
