@@ -56,6 +56,10 @@ This is the first try with the latest version of the prototype.
 </video>
 
 
+Before I finished the complete prototype, I tested it with different end devices. In the ProtoPie app on the computer (for example during the creation), it works fine. In the program there is also a preview mode - then it looks like on a smartphone, there everything works fine. In the browser the speech output does not work, so much of the experience is lost. On the smartphone, everything works, as expected, perfectly.
+
+
+
 ***
 
 ## This is the final prototype as a video and for you to try out
@@ -69,3 +73,6 @@ Here you can see how it works:
 <video width="contain" height="320" controls>
   <source src="assets/vuiUserText.mp4" type="video/mp4">
 </video>
+
+
+***
