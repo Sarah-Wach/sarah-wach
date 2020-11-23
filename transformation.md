@@ -2,11 +2,19 @@
 
 > Transform one of the existing screens from the large prototype according to Google's design guidelines.
 
-![verlgeich](/assets/vergleich.png)
+<p>
+  <a href="/assets/vergleich.png" title="vergleich">
+    <img src="/assets/vergleich.png" alt="vergleich" />
+  </a>
+</p>
 
 For this task, I chose the large screen with four selected diagrams and the fold-out menu on the side. I made sure that everything is very consistent and aligned on a grid. 
 
-![raster](/assets/Material_Dashboard_Raster.png)
+<p>
+  <a href="/assets/Material_Dashboard_Raster.png" title="raster">
+    <img src="/assets/Material_Dashboard_Raster.png" alt="raster" />
+  </a>
+</p>
 
 The first step was to look through all the rules of google material design. 
 For the implementation, I started to build a grid for the big application. The grid at google material design for screens larger than 1920 px is based on 12 columns and 24 px wide margins and gutters. Icons, maps, areas, and fonts are based on this. There are some rules based on the real world, for example, seen on the top app bar or the side menus shadows.
@@ -24,4 +32,8 @@ All colors are based on the material color system. The meaning of the colors are
 
 The final Screen:
 
-![final](/assets/Material_DashboardNEWcolor.png)
+<p>
+  <a href="/assets/Material_DashboardNEWcolor.png" title="final">
+    <img src="/assets/Material_DashboardNEWcolor.png" alt="final" />
+  </a>
+</p>
