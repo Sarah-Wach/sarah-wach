@@ -64,6 +64,7 @@ If someone wants to try the prototype for himself: Download the App ProtoPie fro
 
 [*Click here to view the voice user interface prototyp in Protopie*](https://cloud.protopie.io/p/f02023331e?ui=false&mockup=false&touchHint=true&scaleToFit=false&cursorType=touch)
 
+Here you can see how it works:
 
 <video width="contain" height="320" controls>
   <source src="assets/vuiUserText.mp4" type="video/mp4">
