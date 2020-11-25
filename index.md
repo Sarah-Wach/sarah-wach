@@ -1,25 +1,31 @@
 # Interaction Design
-### #05 Prototype a Voice User Interface Nov 18
 
-[*VUI*](vui.md).
+
+### #06 VUI Prototyping 
 
 [*VUI Prototyp*](vui_prototyp.md).
 
 * * *
 
-### #04 Design Transformation Challenge Nov 11
+### #05 Prototype a Voice User Interface 
+
+[*VUI*](vui.md).
+
+* * *
+
+### #04 Design Transformation Challenge 
 
 [*Design Transformation Challenge*](transformation.md).
 
 * * *
 
-### #03 Responsive Design Challenge Okt 21
+### #03 Responsive Design Challenge 
 
 [*Responsive Design Challenge*](responsive.md).
 
 * * *
 
-### #02 Initial GUI Prototyping Okt 21
+### #02 Initial GUI Prototyping
 
 [*Low-fid*](GUI_low.md)
 
@@ -27,17 +33,17 @@
 
 * * *
 
-### #01 Design the User Experience Okt 14
+### #01 Design the User Experience 
 
  [*The Wallet Project*](wallet.md).
 
 * * *
 
-### #01Prototype Ideas Okt 21
+### #01Prototype Ideas 
 
 [*Value Proposition Canvas*](VPC.md)
 
 * * *
-### #00 KickOff Meeting Okt 07
+### #00 KickOff Meeting 
 
 [*SWOT*](SWOT.md).
