@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Artyom Example</title>
+  <script src="node_modules/artyom.js/build/artyom.window.min.js"></script>
+</head>
+
+<body>
+  <h1>Artyom Example</h1>
+  <button onclick="restartVui()">Neustart</button>
+  <br>
+  <p> Hier sind alle möglichen Antworten, um den Prototyp durchführen zu können:</p>
+  <img src="flow.png" alt="vui flow cheat sheet" width="1000">
+  <script>
+    var artyom;
+
+    var groesse; //Pizza Durchmesser
+    var kosten = 0; //Rechnungsbetrag
+    var adresse = 'Kronengasse 7'; // letzte eigegebene Adresse
+    var zahlen = 'Karte'; //letzte eingegebene Zahlungsmethode
+
+    function restartVui() {
+      kosten = 0;
+
+      if (artyom) {
+        step00(); //wurde schon einmal gestartet, daher muss nicht mehr initialisiert werden
+      } else {
+        artyom = new Artyom(); //artyom initialisieren
+
+        artyom.initialize({
+          lang: 'de-DE',
+          continuous: true,
+          soundex: true,
+          debug: true,
+          listen: true
+        }).then(step00); //nach initialisierung bei step 00 weiter
+
+        // https://github.com/sdkcarlos/artyom.js/issues/7
+        // bricht die Spracherkennung ab, wenn artyom aufhört zu sprechen
+        artyom.when('SPEECH_SYNTHESIS_END', function() {
+          artyom.ArtyomWebkitSpeechRecognition.abort();
+        });
+      }
+    }
+
+    function step00() {
+      artyom.newPrompt({
+        question: 'Hey, du bist heute spät nach Hause gekommen. Möchtest du heute Essen bestellen?',
+        options: ['Ja, ich möchte eine Pizza Funghi bestellen', 'Ich möchte eine Pizza Funghi bestellen'], // Zur Einfachheit wird hier direkt das genaue Gericht "Pizza Funghi" bestellt
+        onMatch: function() {
+          return step01;
+        }
+      });
+    }
+
+    function step01() {
+      artyom.newPrompt({
+        question: 'Möchtest du weitere Zutaten auf dein Gericht?',
+        options: ['nein'],
+        onMatch: function() {
+          return step02;
+        }
+      });
+    }
+
+    function step02() {
+      artyom.newPrompt({
+        question: 'Wie groß soll deine Pizza sein?',
+        options: ['32', 'groß', 'die große Variante bitte', '24', 'klein', 'die kleine Variante bitte'],
+        onMatch: function(i) {
+          if (i <= 2) {
+            groesse = 32;
+            kosten += 12;
+          } else if (i >= 3) {
+            groesse = 24;
+            kosten += 9;
+          }
+
+          return step03;
+        }
+      });
+    }
+
+    function step03() {
+      artyom.newPrompt({
+        question: 'Deine Bestellung kostet bisher ' + kosten + ' Euro. Möchtest du noch mehr bestellen?',
+        options: ['nein'],
+        onMatch: function() {
+          return step04;
+        }
+      });
+    }
+
+    function step04() {
+      artyom.newPrompt({
+        question: 'Soll die Bestellung wieder in die ' + adresse + ' geliefert werden?',
+        smart: true,
+        options: ['ja', 'Nein in den *', 'Nein in die *'], //Hier kann eine alternative Adresse eingegeben werden
+        onMatch: function(i, wildcard) {
+          if (i != 0) {
+            adresse = wildcard;
+          }
+
+          return step05;
+        }
+      });
+    }
+
+    function step05() {
+      artyom.newPrompt({
+        question: 'Willst du wieder mit' + zahlen + 'zahlen wie beim letzten Mal? Es ist auch bar oder mit Pay Pal möglich.',
+        options: ['ja', 'Nein heute lieber mit Bargeld', 'Nein heute möchte ich bar bezahlen', 'bar', 'Bargeld', 'Nein heute lieber mit Paypal', 'Nein heute möchte ich mit Paypal bezahlen', 'Paypal'], //Hier können alternative Zahlungsmittel ausgewählt werden
+        onMatch: function(i) {
+          if (i == 0) {
+
+          } else if (i >= 1 && i <= 4) {
+            zahlen = 'Bargeld';
+            artyom.say('Ok dann halte bitte dein ' + zahlen + ' bereit');
+          } else {
+            zahlen = 'Pay Pal';
+            artyom.say('Ok dann wirst du gleich weiter geleitet.');
+          }
+
+          return step06;
+        }
+      });
+    }
+
+    function step06() {
+      artyom.newPrompt({
+        //Zusammenfassung
+        question: 'Deine heutige Bestellung beinhaltet eine' + groesse + 'cm große Pizza. Es kostet insgesamt' + kosten + 'Euro. Die Lieferdauer nach' + adresse + ' dauert heute 45 Minuten. Wenn das so in Ordnung ist bestelle ich jetzt.',
+        options: ['ja', 'ok', 'das ist ok'],
+        onMatch: function() {
+          //Bestätigung der Bestellung
+          artyom.say('Ok, deine Bestellung ist eingegangen.');
+
+          return ende;
+        }
+      });
+    }
+
+    function ende() {
+      //Endefunktion für artyom
+    }
+  </script>
+</body>
+
+</html>
