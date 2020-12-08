@@ -1,5 +1,10 @@
 # Interaction Design
 
+### #07/8 Workshop - Testing
+
+[*A/B Testing*](https://drive.google.com/file/d/1Vnl3abNvuHfwA81cxGplCXTFFgvz1_p9/view).
+
+* * *
 
 ### #06 VUI Prototyping 
 
