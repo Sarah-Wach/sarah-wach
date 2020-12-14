@@ -1,6 +1,12 @@
 # Interaction Design
 
-### #07/8 Workshop - Testing
+### #09 Workshop — IoT (Organic Electronics)
+
+[*IoT*](iot.md).
+
+* * *
+
+### #07/08 Workshop - Testing
 
 [*A/B Testing*](/assets/ab/AB_Testing.pdf).
 
