@@ -37,7 +37,7 @@ After that, I attached more alligator clips to the painted keys to be able to pl
 
 * * *
 
-**test setup of "touchPiano**
+**setup of "touchPiano**
 
 Material:
 
@@ -92,3 +92,4 @@ This is my final code for my piano idea.
   </a>
 </p>
 
+[*final code*](/assets/iot/finalPiano.ino)
