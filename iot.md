@@ -35,6 +35,23 @@ After that, I attached more alligator clips to the painted keys to be able to pl
   </a>
 </p>
 
+In the next code file, a sound is played for the first time.
+
+<p>
+  <a href="/assets/iot/dritterVersuchCode.png" title="dritterVersuchCode">
+    <img src="/assets/iot/dritterVersuchCode.png" alt="dritterVersuchCode" />
+  </a>
+</p>
+
+Next, everything comes together. All six keys can be pressed and each has its own sound which is played when pressed. 
+Exercise: A sample tone is played, which must be repeated. If the correct key is pressed, the green LED lights up and 'correct' is displayed on the serial monitor. If the wrong one is pressed, the red one lights up and "wrong" is displayed. When all tones have been played once, the practice session starts again from the beginning. 
+
+<p>
+  <a href="/assets/iot/vierterVersuchCode.png" title="vierterVersuchCode">
+    <img src="/assets/iot/vierterVersuchCode.png" alt="vierterVersuchCode" />
+  </a>
+</p>
+
 * * *
 
 **setup of "touchPiano**
@@ -43,6 +60,7 @@ Material:
 
 * ESP 32
 * [*DFPlayer Mini MP3 Player*](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299#target_3)
+* micro SD Card
 * some jumper wires
 * some alligator clips
 * red led
@@ -92,4 +110,7 @@ This is my final code for my piano idea.
   </a>
 </p>
 
-[*final code*](https://github.com/Sarah-Wach/sarah-wach.github.io/blob/main/assets/iot/finalPiano.ino)
+[*here you can find the final code on my github page*](https://github.com/Sarah-Wach/sarah-wach.github.io/blob/main/assets/iot/finalPiano.ino)
+
+
+
