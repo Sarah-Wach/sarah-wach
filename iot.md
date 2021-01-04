@@ -9,6 +9,9 @@ My little sister is learning to play the piano and usually has lessons to get be
 
 **Concept Idea:** After activating, a specified part piece of music, which is to be practiced, is played through a speaker. Then a tone is sounded to indicate that it is the player's turn. During the exercise, red and green LEDs light up to show whether everything has been done correctly. The individual keys of the piano can be touched and are linked to the GPIOs by using wires. 
 
+* * *
+
+
 **first setup** 
 <p>
   <a href="/assets/iot/connectedPiano.png" title="piano Setting">
@@ -19,12 +22,12 @@ My little sister is learning to play the piano and usually has lessons to get be
 Ich habe mir, um das Piano mal zu testen, mit dem Bleistift einfache Tasten aufgemalt. Im ersten Schritt habe ich eine davon mit der Krokodielsklemme verbunden und einen Test Sketch geschrieben. 
 
 <p>
-  <a href="/assets/iot/ersterVersuchCode.png" title="erster Versuch Code>
-    <img src="/assets/iot/ersterVersuchCode.png" alt="erster Versuch Code" />
+  <a href="/assets/iot/ersterVersuchCode.png" title="ersterVersuchCode">
+    <img src="/assets/iot/ersterVersuchCode.png" alt="ersterVersuchCode" />
   </a>
 </p>
 
-Nachdem das funktioniert hat 
+Nachdem das funktioniert hat hab ich weitere Krokodil
 
 * * *
 
