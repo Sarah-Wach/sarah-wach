@@ -44,7 +44,8 @@ In the next code file, a sound is played for the first time.
 </p>
 
 Next, everything comes together. All six keys can be pressed and each has its own sound which is played when pressed. 
-Exercise: A sample tone is played, which must be repeated. If the correct key is pressed, the green LED lights up and 'correct' is displayed on the serial monitor. If the wrong one is pressed, the red one lights up and "wrong" is displayed. When all tones have been played once, the practice session starts again from the beginning. 
+
+**Exercise:** A sample tone is played, which must be repeated. If the correct key is pressed, the green LED lights up and 'correct' is displayed on the serial monitor. If the wrong one is pressed, the red one lights up and "wrong" is displayed. When all tones have been played once, the practice session starts again from the beginning. 
 
 <p>
   <a href="/assets/iot/vierterVersuchCode.png" title="vierterVersuchCode">
