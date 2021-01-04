@@ -35,13 +35,13 @@ After that, I attached more alligator clips to the painted keys to be able to pl
 
 Material:
 
-⋅⋅⋅ ESP 32
-⋅⋅⋅ [*DFPlayer Mini MP3 Player*](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299#target_3)
-⋅⋅⋅ some jumper wires
-⋅⋅⋅ some alligator clips
-⋅⋅⋅ red led
-⋅⋅⋅ green led
-⋅⋅⋅ 2* 1 Ω resistor
+* ESP 32
+* [*DFPlayer Mini MP3 Player*](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299#target_3)
+* some jumper wires
+* some alligator clips
+* red led
+* green led
+* 2x 1 Ω resistor
 
 <p>
   <a href="/assets/iot/schaltplan.png" title="Circuit diagram">
@@ -51,18 +51,18 @@ Material:
 
 Here you can see the first structure "touchPiano". Created with Fritzing.
 Assigned pins: 
-⋅⋅⋅IO 32       Button 1 / Taste 1
-⋅⋅⋅IO 33       Button 2 / Taste 2
-⋅⋅⋅IO 27       Button 3 / Taste 3
-⋅⋅⋅IO 14       Button 4 / Taste 4
-⋅⋅⋅IO 12       Button 5 / Taste 5
-⋅⋅⋅IO 13       Button 6 / Taste 6
+* IO 32       Button 1 / Taste 1
+* IO 33       Button 2 / Taste 2
+* IO 27       Button 3 / Taste 3
+* IO 14       Button 4 / Taste 4
+* IO 12       Button 5 / Taste 5
+* IO 13       Button 6 / Taste 6
 
-⋅⋅⋅IO 25       Communication to DFPlayer Mini
-⋅⋅⋅IO 26       Communication from DFPlayer Mini
+* IO 25       Communication to DFPlayer Mini
+* IO 26       Communication from DFPlayer Mini
 
-⋅⋅⋅D2          led    
-⋅⋅⋅D3          led
+* D2          led    
+* D3          led
 
 During the test setup for my "touchPiano" I noticed that the DFPlayer  is not working properly. In this case, this means that the manufacturer soldered on one spot too many. It took some time to identify the problem. I then ordered a new DFPlayer, which arrived a little later.
  
