@@ -29,6 +29,12 @@ To test the piano, I drew simple keys with a pencil. First, I connected one of t
 
 After that, I attached more alligator clips to the painted keys to be able to play all the keys. I have extended the code accordingly. 
 
+<p>
+  <a href="/assets/iot/zweiterVersuchCode.png" title="zweiterVersuchCode">
+    <img src="/assets/iot/zweiterVersuchCode.png" alt="zweiterVersuchCode" />
+  </a>
+</p>
+
 * * *
 
 **test setup of "touchPiano**
@@ -51,12 +57,12 @@ Material:
 
 Here you can see the first structure "touchPiano". Created with Fritzing.
 Assigned pins: 
-* IO 32       Button 1 / Taste 1
-* IO 33       Button 2 / Taste 2
-* IO 27       Button 3 / Taste 3
-* IO 14       Button 4 / Taste 4
-* IO 12       Button 5 / Taste 5
-* IO 13       Button 6 / Taste 6
+* IO 32       Button/Taste 1 
+* IO 33       Button/Taste 2 
+* IO 27       Button/Taste 3
+* IO 14       Button/Taste 4
+* IO 12       Button/Taste 5
+* IO 13       Button/Taste 6 
 
 * IO 25       Communication to DFPlayer Mini
 * IO 26       Communication from DFPlayer Mini
