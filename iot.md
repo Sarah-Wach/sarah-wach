@@ -13,6 +13,12 @@ My little sister is learning to play the piano and usually has lessons to get be
 
 
 **first setup** 
+Material:
+
+* ESP 32
+* pencil
+* alligator clip
+
 <p>
   <a href="/assets/iot/connectedPiano.png" title="piano Setting">
     <img src="/assets/iot/connectedPiano.png" alt="piano Setting" />
@@ -27,6 +33,16 @@ To test the piano, I drew simple keys with a pencil. First, I connected one of t
   </a>
 </p>
 
+* * *
+
+
+**second setup** 
+Material:
+
+* ESP 32
+* pencil
+* more alligator clips
+
 After that, I attached more alligator clips to the painted keys to be able to play all the keys. I have extended the code accordingly. 
 
 <p>
@@ -34,6 +50,20 @@ After that, I attached more alligator clips to the painted keys to be able to pl
     <img src="/assets/iot/zweiterVersuchCode.png" alt="zweiterVersuchCode" />
   </a>
 </p>
+
+* * *
+
+**third setup** 
+Material:
+
+* ESP 32
+* [*DFPlayer Mini MP3 Player*](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299#target_3)
+* micro SD Card
+* some jumper wires
+* some alligator clips
+* red led
+* green led
+* 3x 1 Ω resistor
 
 In the next code file, a sound is played for the first time.
 
@@ -43,7 +73,32 @@ In the next code file, a sound is played for the first time.
   </a>
 </p>
 
+During the test setup for my "touchPiano" I noticed that the DFPlayer  is not working properly. In this case, this means that the manufacturer soldered on one spot too many. It took some time to identify the problem. I then ordered a new DFPlayer, which arrived a little later.
+ 
+ <p>
+   <a href="/assets/iot/DFPlayer.png" title="DFPlayer">
+     <img src="/assets/iot/DFPlayer.png" alt="DFPlayer" />
+   </a>
+ </p>
+
+With the new DFPlayer, the set-up works.
+
+* * *
+
+**fourth setup** 
+
 Next, everything comes together. All six keys can be pressed and each has its own sound which is played when pressed. 
+
+Material:
+
+* ESP 32
+* DFPlayer Mini MP3 Player
+* micro SD Card
+* some jumper wires
+* some alligator clips
+* red led
+* green led
+* 3x 1 Ω resistor
 
 **Exercise:** A sample tone is played, which must be repeated. If the correct key is pressed, the green LED lights up and 'correct' is displayed on the serial monitor. If the wrong one is pressed, the red one lights up and "wrong" is displayed. When all tones have been played once, the practice session starts again from the beginning. 
 
@@ -62,13 +117,13 @@ For the final result, I thought that the exercise task could be a little differe
 Material:
 
 * ESP 32
-* [*DFPlayer Mini MP3 Player*](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299#target_3)
+* DFPlayer Mini MP3 Player
 * micro SD Card
 * some jumper wires
 * some alligator clips
 * red led
 * green led
-* 2x 1 Ω resistor
+* 3x 1 Ω resistor
 
 <p>
   <a href="/assets/iot/schaltplan.png" title="Circuit diagram">
@@ -77,6 +132,7 @@ Material:
 </p>
 
 Here you can see the first structure "touchPiano". Created with Fritzing.
+
 Assigned pins: 
 * IO 32       Button/Taste 1 
 * IO 33       Button/Taste 2 
@@ -91,21 +147,13 @@ Assigned pins:
 * D2          led    
 * D3          led
 
-During the test setup for my "touchPiano" I noticed that the DFPlayer  is not working properly. In this case, this means that the manufacturer soldered on one spot too many. It took some time to identify the problem. I then ordered a new DFPlayer, which arrived a little later.
- 
- <p>
-   <a href="/assets/iot/DFPlayer.png" title="DFPlayer">
-     <img src="/assets/iot/DFPlayer.png" alt="DFPlayer" />
-   </a>
- </p>
+Here you can see my piano working. First, a sequence of tones is played. This is then imitated. The LEDs light up red or green. The serial monitor also shows the data of the individual keys and whether the sequence was reproduced correctly.
 
-With the new DFPlayer, the set-up works.
+<video width="contain" height="330" controls>
+  <source src="/assets/iot/PianoTogether.mp4" type="video/mp4">
+</video>
 
-
-* * *
-
-
-This is my final code for my piano idea.
+This is my **final code** for my piano idea.
 
 <p>
   <a href="/assets/iot/FinalCode.png" title="final code">
