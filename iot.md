@@ -161,7 +161,7 @@ This is my **final code** for my piano idea.
   </a>
 </p>
 
-[*here you can find the final code on my github page*](https://github.com/Sarah-Wach/sarah-wach.github.io/blob/main/assets/iot/finalPiano.ino)
+[*Here you can find the final code on my github page*](https://github.com/Sarah-Wach/sarah-wach.github.io/blob/main/assets/iot/finalPiano.ino)
 
 
 
