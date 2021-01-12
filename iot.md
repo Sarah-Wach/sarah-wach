@@ -147,7 +147,7 @@ Assigned pins:
 * D2          led    
 * D3          led
 
-Here you can see my piano working. First, a sequence of tones is played. This is then imitated. The LEDs light up red or green. The serial monitor also shows the data of the individual keys and whether the sequence was reproduced correctly.
+Here you can see my piano working. First, a sequence of tones is played. This is then imitated. The LEDs light up red or green. The serial monitor also shows the data of the individual keys and whether the sequence was reproduced correctly. I replaced the graphite keys with thick aluminum foil keys, as this increases the conductivity. Also, the aluminum foil does not rub off after a few practice rounds.
 
 <video width="contain" height="330" controls>
   <source src="/assets/iot/PianoTogether.mp4" type="video/mp4">
