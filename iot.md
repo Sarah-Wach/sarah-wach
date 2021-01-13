@@ -63,7 +63,7 @@ Material:
 * some alligator clips
 * red led
 * green led
-* 3x 1 Ω resistor
+* 3x 1kΩ resistor
 
 In the next code file, a sound is played for the first time.
 
@@ -98,7 +98,7 @@ Material:
 * some alligator clips
 * red led
 * green led
-* 3x 1 Ω resistor
+* 3x 1kΩ resistor
 
 **Exercise:** A sample tone is played, which must be repeated. If the correct key is pressed, the green LED lights up and 'correct' is displayed on the serial monitor. If the wrong one is pressed, the red one lights up and "wrong" is displayed. When all tones have been played once, the practice session starts again from the beginning. 
 
@@ -123,7 +123,7 @@ Material:
 * some alligator clips
 * red led
 * green led
-* 3x 1 Ω resistor
+* 3x 1kΩ resistor
 
 <p>
   <a href="/assets/iot/schaltplan.png" title="Circuit diagram">
