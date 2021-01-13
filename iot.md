@@ -113,9 +113,8 @@ Material:
 * * *
 
 
-<h1><a name="final">setup of "touchPiano</a></h1>
+<h1><a name="final">Final setup of "touchPiano"</a></h1>
 
-**setup of "touchPiano**
 
 For the final result, I thought that the exercise task could be a little different. Instead of practicing one tone at a time, a sequence (the scale) is played. This must then be repeated. The green LED lights up for each correct key. For incorrectly pressed keys, the red LED lights up. Each time a key is pressed, the matching tone is played.
 
