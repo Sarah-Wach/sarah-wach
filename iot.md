@@ -158,7 +158,7 @@ Here you can see my piano working. First, a sequence of tones is played. This is
 </video>
 
 This is my **final code** for my piano idea.
-
+<br> 
 <p>
   <a href="/assets/iot/FinalCode.png" title="final code">
     <img src="/assets/iot/FinalCode.png" alt="final code" />
