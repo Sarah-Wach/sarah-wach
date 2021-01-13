@@ -9,6 +9,8 @@ My little sister is learning to play the piano and usually has lessons to get be
 
 **Concept Idea:** After activating, a specified part piece of music, which is to be practiced, is played through a speaker. Then a tone is sounded to indicate that it is the player's turn. During the exercise, red and green LEDs light up to show whether everything has been done correctly. The individual keys of the piano can be touched and are linked to the GPIOs by using wires. 
 
+<a href="#final">Jump directly to the final result.</a>
+
 * * *
 
 
@@ -109,6 +111,9 @@ Material:
 </p>
 
 * * *
+
+
+<h1><a name="final">setup of "touchPiano</a></h1>
 
 **setup of "touchPiano**
 
