@@ -3,7 +3,7 @@
 ### IoT (Organic Electronics)
 
 <p>
-  <a href="iot.md" title="vui thumbnail">
+  <a href="https://sarah-wach.github.io/iot.html" title="vui thumbnail">
     <img src="/assets/vui/thumbnail.png" alt="vui thumbnail" />
   </a>
 </p>
