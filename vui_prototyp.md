@@ -20,39 +20,39 @@ First, I tested functions with a very simple prototype that only focused on spee
 After these functions had been tested enough and were well implemented in my prototype, I mapped my complete scenario. I added every single question and many corresponding answer options. For each question, there are different words available to make it easier to recognize the voice input. Furthermore, this procedure also enables a very natural flow of speech. You can simply talk and do not have to concentrate on special keywords. 
 
 <p>
-  <a href="/assets/vui_phrases.png" title="phrases">
-    <img src="/assets/vui_phrases.png" alt="phrases" />
+  <a href="/assets/vui/vui_phrases.png" title="phrases">
+    <img src="/assets/vui/vui_phrases.png" alt="phrases" />
   </a>
 </p>
 
 Because the usage of my prototype happens with the smartphone I designed an interface. The interface is kept in orange shades because they are warm and active and are said to stimulate the appetite. Many brands like Fanta, Dunkin Donuts, or Lieferando have chosen this color. 
 
 <p>
-  <a href="/assets/vui_orange-logos.png" title="orangene logos">
-    <img src="/assets/vui_orange-logos.png" alt="orangene logos" />
+  <a href="/assets/vui/vui_orange-logos.png" title="orangene logos">
+    <img src="/assets/vui/vui_orange-logos.png" alt="orangene logos" />
   </a>
 </p>
 
 Here is a possible flow of this "conversation".
 
 <p>
-  <a href="/assets/vui_verlauf.png" title="conversation flow">
-    <img src="/assets/vui_verlauf.png" alt="conversation flow" />
+  <a href="/assets/vui/vui_verlauf.png" title="conversation flow">
+    <img src="/assets/vui/vui_verlauf.png" alt="conversation flow" />
   </a>
 </p>
 
 That's how I worked on my prototype.
 
 <p>
-  <a href="/assets/vui_aufbau.png" title="work">
-    <img src="/assets/vui_aufbau.png" alt="work" />
+  <a href="/assets/vui/vui_aufbau.png" title="work">
+    <img src="/assets/vui/vui_aufbau.png" alt="work" />
   </a>
 </p>
 
 This is the first try with the latest version of the prototype.
 
 <video width="contain" height="320" controls>
-  <source src="assets/vui_short.mp4" type="video/mp4">
+  <source src="assets/vui/vui_short.mp4" type="video/mp4">
 </video>
 
 
@@ -71,7 +71,7 @@ If someone wants to try the prototype: Download the App ProtoPie from the App St
 Here you can see how it works:
 
 <video width="contain" height="320" controls>
-  <source src="assets/vuiUserText.mp4" type="video/mp4">
+  <source src="assets/vui/vuiUserText.mp4" type="video/mp4">
 </video>
 
 
@@ -81,7 +81,7 @@ Here you can see how it works:
 
 I also realized my prototype with Artyom. All possible answers of the user are shown as a flowchart in the prototype.
 
-[*VUI Prototyp Artyom*](vui_artyom/index.html)
+[*VUI Prototyp Artyom*](vui/vui_artyom/index.html)
 
 Here you can see how it works:
 

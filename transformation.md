@@ -3,16 +3,16 @@
 > Transform one of the existing screens from the large prototype according to Google's design guidelines.
 
 <p>
-  <a href="/assets/vergleich.png" title="vergleich">
-    <img src="/assets/vergleich.png" alt="vergleich" />
+  <a href="/assets/gui/vergleich.png" title="vergleich">
+    <img src="/assets/gui/vergleich.png" alt="vergleich" />
   </a>
 </p>
 
 For this task, I chose the large screen with four selected diagrams and the fold-out menu on the side. I made sure that everything is very consistent and aligned on a grid. 
 
 <p>
-  <a href="/assets/Material_Dashboard_Raster.png" title="raster">
-    <img src="/assets/Material_Dashboard_Raster.png" alt="raster" />
+  <a href="/assets/gui/Material_Dashboard_Raster.png" title="raster">
+    <img src="/assets/gui/Material_Dashboard_Raster.png" alt="raster" />
   </a>
 </p>
 
@@ -24,7 +24,7 @@ For the menu on the side I used a navigation drawer, it provides access to desti
 
 Each of the diagrams has a data label that appears when the mouse hovers over it. The diagrams have their color, which reflects each value accordingly. 
 
-![color](/assets/vergleich_colors.png)
+![color](/assets/gui/vergleich_colors.png)
 
 All colors are based on the material color system. The meaning of the colors are the same, I just adjusted the right shade of material.
 
@@ -33,7 +33,7 @@ All colors are based on the material color system. The meaning of the colors are
 ## The final Screen:
 
 <p>
-  <a href="/assets/Material_DashboardNEWcolor.png" title="final">
-    <img src="/assets/Material_DashboardNEWcolor.png" alt="final" />
+  <a href="/assets/gui/Material_DashboardNEWcolor.png" title="final">
+    <img src="/assets/gui/Material_DashboardNEWcolor.png" alt="final" />
   </a>
 </p>
