@@ -1,62 +1,27 @@
 # Interaction Design
 
-### #09 Workshop — IoT (Organic Electronics)
+### IoT (Organic Electronics)
+
+<p>
+  <a href="iot.md" title="vui thumbnail">
+    <img src="/assets/vui/thumbnail.png" alt="vui thumbnail" />
+  </a>
+</p>
 
 [*IoT*](iot.md).
 
 * * *
 
-### #07/08 Workshop - Testing
+### Testing
 
 [*A/B Testing*](/assets/ab/AB_Testing.pdf).
 
 * * *
 
-### #06 VUI Prototyping 
-
-[*VUI Prototyp*](vui_prototyp.md).
-
-[*VUI Prototyp Artyom*](vui_artyom/index.html).
+###  VUI
+[*Design Transformation Challenge*](VUI.md).
 
 * * *
 
-### #05 Prototype a Voice User Interface 
-
-[*VUI*](vui.md).
-
-* * *
-
-### #04 Design Transformation Challenge 
-
-[*Design Transformation Challenge*](transformation.md).
-
-* * *
-
-### #03 Responsive Design Challenge 
-
-[*Responsive Design Challenge*](responsive.md).
-
-* * *
-
-### #02 Initial GUI Prototyping
-
-[*Low-fid*](GUI_low.md)
-
-[*Mid-fid/High-fid*](GUI_mid.md)
-
-* * *
-
-### #01 Design the User Experience 
-
- [*The Wallet Project*](wallet.md).
-
-* * *
-
-### #01Prototype Ideas 
-
-[*Value Proposition Canvas*](VPC.md)
-
-* * *
-### #00 KickOff Meeting 
-
-[*SWOT*](SWOT.md).
+###  GUI
+[*Design Transformation Challenge*](GUI.md).
