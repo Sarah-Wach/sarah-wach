@@ -2,12 +2,6 @@
 
 ### IoT (Organic Electronics)
 
-<p>
-  <a href="https://sarah-wach.github.io/iot.html" title="vui thumbnail">
-    <img src="/assets/vui/thumbnail.png" alt="vui thumbnail" />
-  </a>
-</p>
-
 [*IoT*](iot.md).
 
 * * *
@@ -19,6 +13,14 @@
 * * *
 
 ###  VUI
+
+<p>
+  <a href="https://sarah-wach.github.io/iot.html">
+    <img src="/assets/vui/thumbnail.png" alt="vui thumbnail" width="200">
+  </a>
+</p>
+
+
 [*Design Transformation Challenge*](VUI.md).
 
 * * *
