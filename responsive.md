@@ -1,4 +1,3 @@
-## Exercise /#03
 ## Responsive Design Challenge
 
 

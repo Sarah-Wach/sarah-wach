@@ -19,7 +19,7 @@
 
 
 <p>
-  <a href="https://sarah-wach.github.io/vui.html">
+  <a href="https://sarah-wach.github.io/VUI.html">
     <img src="/assets/vui/thumbnail.png" alt="vui thumbnail" width="300">
   </a>
 </p>
