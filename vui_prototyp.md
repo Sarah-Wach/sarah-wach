@@ -12,8 +12,8 @@ For this task, I searched for other possibilities to work on the task besides th
 First, I tested functions with a very simple prototype that only focused on speech output. 
 
 <p>
-  <a href="/assets/vui_first_protopie.png" title="first Prototyp">
-    <img src="/assets/vui_first_protopie.png" alt="first Prototyp" />
+  <a href="/assets/vui/vui_first_protopie.png" title="first Prototyp">
+    <img src="/assets/vui/vui_first_protopie.png" alt="first Prototyp" />
   </a>
 </p>
 
