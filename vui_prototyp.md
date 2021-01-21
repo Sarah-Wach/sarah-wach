@@ -4,8 +4,8 @@
 For this task, I searched for other possibilities to work on the task besides the offered suggestions from the exercise. For this purpose, I have decided to use ProtoPie. ProtoPie is an interactive, digital prototyping tool, which I already worked with during my bachelor's degree. There are three types of voice interaction pieces: Text to speech response, speech recognition response, and recognize speech trigger. With the text-to-speech function, a text can be output in many languages. The speech recognition response gives the possibility that ProtoPie continues to listen even after a long pause and with a "recognize speech trigger" the speech input can be controlled. 
 
 <p>
-  <a href="/assets/vui_voicePrototyp.png" title="vui voice Prototyp">
-    <img src="/assets/vui_voicePrototyp.png" alt="vui voice Prototyp" />
+  <a href="/assets/vui/vui_voicePrototyp.png" title="vui voice Prototyp">
+    <img src="/assets/vui/vui_voicePrototyp.png" alt="vui voice Prototyp" />
   </a>
 </p>
 
