@@ -19,13 +19,13 @@
 
 
 <p>
-  <a href="https://sarah-wach.github.io/VUI.html">
+  <a href="https://sarah-wach.github.io/vui.html">
     <img src="/assets/vui/thumbnail.png" alt="vui thumbnail" width="300">
   </a>
 </p>
 
 
-###  [*Voice User Interface*](VUI.md)
+###  [*Voice User Interface*](vui.md)
 
 
 <p>
