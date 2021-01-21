@@ -1,20 +1,38 @@
-## Initial GUI Prototyping
+## Graphical User Interfaces
 
 
-### #04 Design Transformation Challenge 
 
-[*Design Transformation Challenge*](transformation.md).
+<p>
+  <a href="https://sarah-wach.github.io/transformation.html">
+    <img src="/assets/gui/guiinhalt/thumbnail4.png" alt="gui thumbnail" width="300">
+  </a>
+</p>
 
-* * *
+### [*Design Transformation Challenge*](transformation.md).
 
-### #03 Responsive Design Challenge 
 
-[*Responsive Design Challenge*](responsive.md).
+<p>
+  <a href="https://sarah-wach.github.io/iot.html">
+    <img src="/assets/gui/guiinhalt/thumbnail3.png" alt="gui thumbnail" width="300">
+  </a>
+</p>
 
-* * *
+### [*Responsive Design Challenge*](responsive.md).
 
-### #02 Initial GUI Prototyping
 
-[*Low-fid*](GUI_low.md)
+<p>
+  <a href="https://sarah-wach.github.io/iot.html">
+    <img src="/assets/gui/guiinhalt/thumbnail2.png" alt="gui thumbnail" width="300">
+  </a>
+</p>
 
-[*Mid-fid/High-fid*](GUI_mid.md)
+### [*mid-fidelity/high-fidelity prototype*](GUI_mid.md)
+
+
+<p>
+  <a href="https://sarah-wach.github.io/iot.html">
+    <img src="/assets/gui/guiinhalt/thumbnail1.png" alt="gui thumbnail" width="300">
+  </a>
+</p>
+
+### [*low-fidelity prototype*](GUI_low.md)

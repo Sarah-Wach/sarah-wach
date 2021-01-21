@@ -1,6 +1,5 @@
-## Initial GUI Prototyping
+## Graphical User Interfaces
 
-### 1. Mid-fid/High-fid Prototype
 
 
 ### #06 VUI Prototyping 

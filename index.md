@@ -6,7 +6,7 @@
   </a>
 </p>
 
-### IoT (Organic Electronics) [*IoT*](iot.md).
+###  [*IoT (Organic Electronics)*](iot.md)
 
 
 <p>
@@ -15,7 +15,7 @@
   </a>
 </p>
 
-### Testing [*A/B Testing*](/assets/ab/AB_Testing.pdf).
+### [*A/B Testing*](/assets/ab/AB_Testing.pdf)
 
 
 <p>
@@ -25,7 +25,7 @@
 </p>
 
 
-###  VUI [*Voice User Interface*](VUI.md).
+###  [*Voice User Interface*](VUI.md)
 
 
 <p>
@@ -34,4 +34,4 @@
   </a>
 </p>
 
-###  GUI [*Design Transformation Challenge*](GUI.md).
+###  [*Graphical User Interfaces*](GUI.md)
