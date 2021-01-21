@@ -26,4 +26,4 @@
   </a>
 </p>
 
-###  [*Prototype a Voice User Interface *](vui_szenario.md).
+###  [*Prototype a Voice User Interface*](vui_szenario.md).
