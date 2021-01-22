@@ -12,7 +12,7 @@
 
 
 <p>
-  <a href="https://sarah-wach.github.io/iot.html">
+  <a href="https://sarah-wach.github.io/responsive.html">
     <img src="/assets/gui/guiinhalt/thumbnail3.png" alt="gui thumbnail" width="300">
   </a>
 </p>
@@ -21,7 +21,7 @@
 
 
 <p>
-  <a href="https://sarah-wach.github.io/iot.html">
+  <a href="https://sarah-wach.github.io/GUI_mid.html">
     <img src="/assets/gui/guiinhalt/thumbnail2.png" alt="gui thumbnail" width="300">
   </a>
 </p>
@@ -30,7 +30,7 @@
 
 
 <p>
-  <a href="https://sarah-wach.github.io/iot.html">
+  <a href="https://sarah-wach.github.io/GUI_low.html">
     <img src="/assets/gui/guiinhalt/thumbnail1.png" alt="gui thumbnail" width="300">
   </a>
 </p>
