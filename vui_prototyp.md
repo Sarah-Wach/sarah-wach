@@ -81,7 +81,7 @@ Here you can see how it works:
 
 I also realized my prototype with Artyom. All possible answers of the user are shown as a flowchart in the prototype.
 
-[*VUI Prototyp Artyom*](vui/vui_artyom/index.html)
+[*VUI Prototyp Artyom*](vui_artyom/index.html)
 
 Here you can see how it works:
 
