@@ -12,7 +12,7 @@
 
 
 <p>
-  <a href="https://sarah-wach.github.io/vui_artyom.html/index.html">
+  <a href="https://sarah-wach.github.io/vui_artyom/index.html">
     <img src="/assets/vui/vuiinhalt/thumbnail2.png" alt="gui thumbnail" width="300">
   </a>
 </p>
