@@ -29,7 +29,7 @@
 <br/>
 <br/>
 <p>
-  <a href="https://sarah-wach.github.io/GUI.html">
+  <a href="https://sarah-wach.github.io/gui.html">
     <img src="/assets/gui/thumbnail.png" alt="gui thumbnail" width="300">
   </a>
 </p>
