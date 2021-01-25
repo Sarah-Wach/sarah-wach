@@ -34,4 +34,4 @@
   </a>
 </p>
 
-###  [*Graphical User Interfaces*](GUI.md)
+###  [*Graphical User Interfaces*](gui.md)
