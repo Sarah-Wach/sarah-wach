@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://sarah-wach.github.io/hill.html">
-    <img src="/assets/iot/thumbnail.png" alt="iot thumbnail" width="300">
+    <img src="/assets/bgDay.png" alt="hill thumbnail" width="300">
   </a>
 </p>
 
