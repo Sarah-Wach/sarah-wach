@@ -6,40 +6,35 @@ html, body {
 body {
   overflow: hidden;
 }
+/* old slider */
 
 .DayNight {
-	bottom: 50px;
+	bottom: 25px;
 }
 
 .fog{
-	bottom: 90px;
+	bottom: 50px;
 }
 
 .distance{
-	bottom: 130px;
+	bottom: 75px;
 }
 
-.value {
-	text-align: center;
-	color: #fff;
-	font: 25px monospace;
-}
 
 .range {
 	transform: rotate(180deg);
 	grid-area: 1 / 1 / -1 / -1;
-	width: 150px;
-	height: 30px;
+	width: 340px;
+	height: 10px;
 	border-radius: 50px;
 	display: grid;
-	grid-template: 30px / 140px; /* Slider Line */
+	grid-template: 30px / 340px; /* Slider Line */
 	align-content: center;
 	justify-content: center;
-	position: relative;
-	background: #fff;
-	box-shadow: 0 0 5px #00000047;
+	/*background: #fff;
+	box-shadow: 0 0 5px #00000047;*/
 	position: fixed;
-	left: 50%;
+	left: 20%;
 	margin-left: -75px;
 	margin-top: -15px;
 }
@@ -55,7 +50,7 @@ body {
 .knobe {
 	grid-area: 1 / 1 / -1 / -1;
 	resize: horizontal;
-	min-width: 20px;
+	min-width: 10px;
 	max-width: 100%;
 	overflow: hidden;
 	position: relative;
@@ -67,15 +62,55 @@ body {
 	height: 20px;
 	right: 0;
 	top: 5px;
-	background: #ff9800;
-	border-radius: 50px;
+	background: #B75DE8;
+	border-radius: 20px;
 }
 .knobe:active:after {
-	background: #ff5722;
+	background: #D115B8;
 }
 ::-webkit-resizer {
 	display: none;
 }
+
+/* old slider end*/
+
+/* new slider */
+.slidecontainer {
+  width: 10%;
+}
+
+.slider  {
+  -webkit-appearance: none;
+  width: 340px;
+  height: 5px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  position: fixed;
+	left: 10%;
+  align-content: center;
+	justify-content: center;
+  z-index: 10;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #D115B8;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* new slider end */
+
+
 .rain {
   position: absolute;
   width: 0.1rem;

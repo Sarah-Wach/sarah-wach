@@ -14,19 +14,17 @@
 <body>
   <script src="https://threejs.org/build/three.js"></script>
 
-  <!-- - - - Slider -->
-  <div class="range DayNight">
-    <div class="knobe"></div>
-  </div>
 
-  <div class="range fog">
-    <div class="knobe"></div>
+  <!-- - - -  Slider -->
+  <div class="slidecontainer ">
+    <input type="range" value="0" min="0" max="100" class="slider DayNight">
   </div>
-
-  <div class="range distance">
-    <div class="knobe"></div>
+  <div class="slidecontainer ">
+    <input type="range" value="0" min="0" max="100" class="slider fog">
   </div>
-
+  <div class="slidecontainer ">
+    <input type="range" value="0" min="0" max="100" class="slider distance">
+  </div>
 
   <!-- - - - rain -->
   <div class="rain rain1"></div>
@@ -56,8 +54,6 @@
     var listener = new THREE.AudioListener();
     camera.add(listener);
 
-    scene.fog = new THREE.FogExp2(0x000000, 0.0008);
-
     var renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -67,7 +63,8 @@
     var geometryLeft = new THREE.PlaneGeometry(window.innerWidth / 2, window.innerHeight / 2);
     var geometryRight = new THREE.PlaneGeometry(window.innerWidth / 2, window.innerHeight / 2);
     var loader = new THREE.TextureLoader();
-
+    var circleGeometry = new THREE.CircleGeometry(window.innerWidth / 6, 60, 0);
+    var starGeometry = new THREE.BufferGeometry();
 
 
     // - - - global audio source
@@ -121,8 +118,12 @@
     });
 
     // - - - Material
-    var material = new THREE.MeshBasicMaterial({
+    var materialBackground = new THREE.MeshBasicMaterial({
       map: loader.load('images/bgDay.png')
+    });
+    var materialForeground = new THREE.MeshBasicMaterial({
+      map: loader.load('images/bgDayForeground.png'),
+      transparent: true
     });
     var materialFog = new THREE.MeshBasicMaterial({
       map: loader.load('images/bgFog.png'),
@@ -140,61 +141,77 @@
       map: loader.load('images/bgNight.png'),
       transparent: true
     });
+    var materialNightForeground = new THREE.MeshBasicMaterial({
+      map: loader.load('images/bgNightForeground.png'),
+      transparent: true
+    });
+    var materialCircle = new THREE.MeshBasicMaterial({
+      map: loader.load('images/moon.png'),
+      transparent: true
+    });
 
     // - - - Mesh
-    var background = new THREE.Mesh(geometry, material);
+    var background = new THREE.Mesh(geometry, materialBackground);
+    var foreground = new THREE.Mesh(geometry, materialForeground);
     var hill = new THREE.Mesh(geometryLeft, materialHill);
     var hillRight = new THREE.Mesh(geometryRight, materialHillRight);
     var fog = new THREE.Mesh(geometry, materialFog);
     var night = new THREE.Mesh(geometry, materialNight);
+    var nightForeground = new THREE.Mesh(geometry, materialNightForeground);
+    var moon = new THREE.Mesh(circleGeometry, materialCircle)
 
 
 
 
     // - - - Add to Scene
-    scene.add(background, fog, night, hill, hillRight);
+    scene.add(background, foreground, fog, night, nightForeground, hill, hillRight, moon);
 
 
 
     // - - - Kamera Position
     camera.position.z = 12;
+    background.position.z = 1;
+    night.position.z = 1;
+    foreground.position.z = 4;
+    nightForeground.position.z = 5;
     hill.position.y = window.innerHeight / -3;
     hill.position.z = 10;
     hillRight.position.y = window.innerHeight / -4;
     hillRight.position.z = 10;
-    fog.position.z = 2;
+    fog.position.z = 3;
+    moon.position.z = 3;
 
     document.body.appendChild(renderer.domElement);
 
     // - - - Rendern
     function render() {
-      var distance = document.querySelector('.distance .knobe').offsetWidth - 20;
-      var distancePercentage = 1 + distance / 120;
-      hill.position.x = (window.innerWidth / -3) * distancePercentage;
-      hillRight.position.x = (window.innerWidth / 4) * distancePercentage;
+      var distance = document.querySelector('.distance').value / 100;
+      hill.position.x = (window.innerWidth / -3) * (2 - distance);
+      hillRight.position.x = (window.innerWidth / 4) * (2 - distance);
 
-      var distanceBackgroundPercentage = 1.2 - (1 - distance / 120) * (1.2 - 1);
+      var distanceBackgroundPercentage = 1.1 - (distance / 10);
       background.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      foreground.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       fog.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       fog.opacity = 0.5;
       night.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       night.opacity = 0.5;
 
-      var fogPosition = document.querySelector('.fog .knobe').offsetWidth - 20;
-      var fogPercentage = 1 - fogPosition / 120;
-      fog.material.opacity = fogPercentage;
+      var fogPosition = document.querySelector('.fog').value / 100;
+      fog.material.opacity = fogPosition;
 
-      var dayNightPosition = document.querySelector('.DayNight .knobe').offsetWidth - 20;
-      var nightPercentage = 1 - dayNightPosition / 120;
-      night.material.opacity = nightPercentage;
+      var dayNightPosition = document.querySelector('.DayNight').value / 100;
+      //var nightPercentage = 1 - dayNightPosition / 340;
+      night.material.opacity = dayNightPosition;
+      nightForeground.material.opacity = dayNightPosition;
+      moon.material.opacity = dayNightPosition;
+      moon.position.y = dayNightPosition * 10;
 
-      var hillPosition = document.querySelector('.distance .knobe').offsetWidth - 20;
-      var hillPercentage = 1 - hillPosition / 120;
 
 
       // - - - Rain
       var rainDisplay = 'none';
-      if (1 - fogPosition / 120 >= 0.8) {
+      if (fogPosition >= 0.8) {
         rainDisplay = 'block';
 
       }
@@ -204,7 +221,7 @@
 
       // - - - Wind
       var windDisplay = 'none';
-      if (1 - hillPosition / 120 >= 0.8) {
+      if (distance >= 0.8) {
         windDisplay = 'block';
 
       }
@@ -213,11 +230,11 @@
       });
 
       // - - - Sound Settings
-      windSound.setVolume(4 * (1 - hillPosition / 120));
-      daySound.setVolume(3 * (dayNightPosition / 120));
-      nightSound.setVolume(2 * (1 - dayNightPosition / 120));
-      stormSound.setVolume(1 - fogPosition / 120);
-      rainSound.setVolume((1 - fogPosition / 120) >= 0.8);
+      windSound.setVolume(distance / 2);
+      daySound.setVolume(1 - (2 * dayNightPosition));
+      nightSound.setVolume(dayNightPosition / 2);
+      stormSound.setVolume(fogPosition / 2);
+      rainSound.setVolume(fogPosition / 2);
 
 
       renderer.render(scene, camera);
