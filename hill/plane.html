@@ -9,9 +9,12 @@
     }
   </style>
   <link rel="stylesheet" type="text/css" href="plane.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
+
 <body>
+
   <script src="https://threejs.org/build/three.js"></script>
 
 
@@ -25,6 +28,11 @@
   <div class="slidecontainer ">
     <input type="range" value="0" min="0" max="100" class="slider distance">
   </div>
+
+  <!-- - - - audio -->
+  <audio class="frogSound" loop preload="auto">
+    <source src="sounds/frog.wav" type="audio/wav">
+  </audio>
 
   <!-- - - - rain -->
   <div class="rain rain1"></div>
@@ -50,6 +58,7 @@
   <!-- - - - Scene -->
   <script>
     var scene = new THREE.Scene(); // Szene in der alles passiert
+    scene.fog = new THREE.FogExp2(0x000000, 0.001);
     var camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2); // Kamera
     var listener = new THREE.AudioListener();
     camera.add(listener);
@@ -59,12 +68,13 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // - - - Geometrie
+    var loader = new THREE.TextureLoader();
     var geometry = new THREE.PlaneGeometry(1, 1);
     var geometryLeft = new THREE.PlaneGeometry(window.innerWidth / 2, window.innerHeight / 2);
     var geometryRight = new THREE.PlaneGeometry(window.innerWidth / 2, window.innerHeight / 2);
-    var loader = new THREE.TextureLoader();
     var circleGeometry = new THREE.CircleGeometry(window.innerWidth / 6, 60, 0);
     var starGeometry = new THREE.BufferGeometry();
+    var vertices = [];
 
 
     // - - - global audio source
@@ -73,10 +83,11 @@
     var daySound = new THREE.Audio(listener);
     var nightSound = new THREE.Audio(listener);
     var stormSound = new THREE.Audio(listener);
+    var campfireSound = new THREE.Audio(listener);
 
     // - - - load Audio and set it as the Audio object's buffer
     var windSoundLoader = new THREE.AudioLoader();
-    windSoundLoader.load('sounds/wind.wav', function(buffer) {
+    windSoundLoader.load('sounds/wind.wav', function (buffer) {
       windSound.setBuffer(buffer);
       windSound.setLoop(true);
       windSound.setVolume(0);
@@ -84,7 +95,7 @@
     });
 
     var daySoundLoader = new THREE.AudioLoader();
-    daySoundLoader.load('sounds/day.wav', function(buffer) {
+    daySoundLoader.load('sounds/day.wav', function (buffer) {
       daySound.setBuffer(buffer);
       daySound.setLoop(true);
       daySound.setVolume(0);
@@ -93,7 +104,7 @@
     });
 
     var nightSoundLoader = new THREE.AudioLoader();
-    nightSoundLoader.load('sounds/night.wav', function(buffer) {
+    nightSoundLoader.load('sounds/night.wav', function (buffer) {
       nightSound.setBuffer(buffer);
       nightSound.setLoop(true);
       nightSound.setVolume(0);
@@ -102,7 +113,7 @@
     });
 
     var rainSoundLoader = new THREE.AudioLoader();
-    rainSoundLoader.load('sounds/rain.wav', function(buffer) {
+    rainSoundLoader.load('sounds/rain.wav', function (buffer) {
       rainSound.setBuffer(buffer);
       rainSound.setLoop(true);
       rainSound.setVolume(0);
@@ -110,12 +121,44 @@
     });
 
     var stormSoundLoader = new THREE.AudioLoader();
-    stormSoundLoader.load('sounds/windMountain.wav', function(buffer) {
+    stormSoundLoader.load('sounds/windMountain.wav', function (buffer) {
       stormSound.setBuffer(buffer);
       stormSound.setLoop(true);
       stormSound.setVolume(0);
       stormSound.play();
     });
+
+    var campfireSoundLoader = new THREE.AudioLoader();
+    campfireSoundLoader.load('sounds/campfire.wav', function (buffer) {
+      campfireSound.setBuffer(buffer);
+      campfireSound.setLoop(true);
+      campfireSound.setVolume(0);
+      campfireSound.play();
+    });
+
+
+    // - - - panning
+    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    var myAudio = document.querySelector('.frogSound');
+    var source = audioCtx.createMediaElementSource(myAudio);
+    var panNode = audioCtx.createStereoPanner();
+    panNode.pan.value = -0.5;
+    source.connect(panNode);
+    panNode.connect(audioCtx.destination);
+    myAudio.play();
+
+
+    // - - - Stars
+    for (let i = 0; i < 100; i++) {
+      var x = getRandomArbitrary(window.innerWidth / -2, window.innerWidth / 2);
+      var y = getRandomArbitrary(window.innerHeight / -3, window.innerHeight / 2);
+      var z = 2;
+
+      vertices.push(x, y, z);
+
+    }
+    starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
 
     // - - - Material
     var materialBackground = new THREE.MeshBasicMaterial({
@@ -133,6 +176,7 @@
       map: loader.load('images/2.png'),
       alphaTest: 0.5,
     });
+
     var materialHillRight = new THREE.MeshBasicMaterial({
       map: loader.load('images/3.png'),
       alphaTest: 0.5,
@@ -150,6 +194,17 @@
       transparent: true
     });
 
+    var materialStar = new THREE.PointsMaterial({
+      map: loader.load('images/star.png'),
+      color: '#ff0',
+      size: 10,
+      transparent: true,
+      alphaTest: 0.5
+    })
+
+
+
+
     // - - - Mesh
     var background = new THREE.Mesh(geometry, materialBackground);
     var foreground = new THREE.Mesh(geometry, materialForeground);
@@ -158,17 +213,17 @@
     var fog = new THREE.Mesh(geometry, materialFog);
     var night = new THREE.Mesh(geometry, materialNight);
     var nightForeground = new THREE.Mesh(geometry, materialNightForeground);
-    var moon = new THREE.Mesh(circleGeometry, materialCircle)
-
+    var moon = new THREE.Mesh(circleGeometry, materialCircle);
+    var starParticles = new THREE.Points(starGeometry, materialStar);
 
 
 
     // - - - Add to Scene
-    scene.add(background, foreground, fog, night, nightForeground, hill, hillRight, moon);
+    scene.add(background, foreground, fog, night, nightForeground, hill, hillRight, moon, starParticles);
 
 
 
-    // - - - Kamera Position
+    // - - -  Position
     camera.position.z = 12;
     background.position.z = 1;
     night.position.z = 1;
@@ -180,6 +235,8 @@
     hillRight.position.z = 10;
     fog.position.z = 3;
     moon.position.z = 3;
+    moon.position.y = 0;
+
 
     document.body.appendChild(renderer.domElement);
 
@@ -189,6 +246,8 @@
       hill.position.x = (window.innerWidth / -3) * (2 - distance);
       hillRight.position.x = (window.innerWidth / 4) * (2 - distance);
 
+
+
       var distanceBackgroundPercentage = 1.1 - (distance / 10);
       background.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       foreground.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
@@ -196,6 +255,8 @@
       fog.opacity = 0.5;
       night.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       night.opacity = 0.5;
+      nightForeground.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+
 
       var fogPosition = document.querySelector('.fog').value / 100;
       fog.material.opacity = fogPosition;
@@ -205,17 +266,20 @@
       night.material.opacity = dayNightPosition;
       nightForeground.material.opacity = dayNightPosition;
       moon.material.opacity = dayNightPosition;
-      moon.position.y = dayNightPosition * 10;
-
+      moon.position.y = (window.innerHeight / -4) * (2 - dayNightPosition);
+      starParticles.material.opacity = dayNightPosition;
 
 
       // - - - Rain
       var rainDisplay = 'none';
       if (fogPosition >= 0.8) {
         rainDisplay = 'block';
+        rainSound.setVolume(2);
 
+      } else {
+        rainSound.setVolume(0);
       }
-      document.querySelectorAll('.rain').forEach(function(drop) {
+      document.querySelectorAll('.rain').forEach(function (drop) {
         drop.style.display = rainDisplay;
       });
 
@@ -223,18 +287,23 @@
       var windDisplay = 'none';
       if (distance >= 0.8) {
         windDisplay = 'block';
-
+        windSound.setVolume(2);
+        campfireSound.setVolume(0);
+      } else {
+        windSound.setVolume(0);
+        campfireSound.setVolume(4);
       }
-      document.querySelectorAll('.wind').forEach(function(bow) {
+
+      document.querySelectorAll('.wind').forEach(function (bow) {
         bow.style.display = windDisplay;
       });
 
       // - - - Sound Settings
-      windSound.setVolume(distance / 2);
+
       daySound.setVolume(1 - (2 * dayNightPosition));
       nightSound.setVolume(dayNightPosition / 2);
       stormSound.setVolume(fogPosition / 2);
-      rainSound.setVolume(fogPosition / 2);
+      panNode.pan.value = distance - 1;
 
 
       renderer.render(scene, camera);
@@ -256,6 +325,11 @@
     }
 
     window.addEventListener('resize', windowResizer);
+
+    // Erzeugt eine Zufallszahl zwischen Min und Max (für die Sterne)
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
   </script>
 
 
