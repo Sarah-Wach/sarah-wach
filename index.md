@@ -10,6 +10,16 @@
 <br/>
 <br/>
 
+<p>
+  <a href="https://sarah-wach.github.io/hillold.html">
+    <img src="/assets/bgDay.png" alt="hill thumbnail" width="300">
+  </a>
+</p>
+
+###  [*Old hill project*](hill.md)
+<br/>
+<br/>
+
 
 # Interaction Design
 

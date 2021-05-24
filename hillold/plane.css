@@ -1,0 +1,244 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+/* old slider */
+
+.DayNight {
+	bottom: 25px;
+}
+
+.fog{
+	bottom: 50px;
+}
+
+.distance{
+	bottom: 75px;
+}
+
+
+.range {
+	transform: rotate(180deg);
+	grid-area: 1 / 1 / -1 / -1;
+	width: 340px;
+	height: 10px;
+	border-radius: 50px;
+	display: grid;
+	grid-template: 30px / 340px; /* Slider Line */
+	align-content: center;
+	justify-content: center;
+	/*background: #fff;
+	box-shadow: 0 0 5px #00000047;*/
+	position: fixed;
+	left: 20%;
+	margin-left: -75px;
+	margin-top: -15px;
+}
+.range:after {
+	content: "";
+	grid-area: 1 / 1 / -1 / -1;
+	height: 3px;
+	background: #9e9e9e3d;
+	border-radius: 50px;
+	margin: 12.5px 0;
+}
+
+.knobe {
+	grid-area: 1 / 1 / -1 / -1;
+	resize: horizontal;
+	min-width: 10px;
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.knobe:after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 0;
+	top: 5px;
+	background: #B75DE8;
+	border-radius: 20px;
+}
+.knobe:active:after {
+	background: #D115B8;
+}
+::-webkit-resizer {
+	display: none;
+}
+
+/* old slider end*/
+
+/* new slider */
+.slidecontainer {
+  width: 10%;
+}
+
+.slider  {
+  -webkit-appearance: none;
+  width: 340px;
+  height: 5px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  position: fixed;
+	left: 10%;
+  align-content: center;
+	justify-content: center;
+  z-index: 10;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #D115B8;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* new slider end */
+
+
+.rain {
+  position: absolute;
+  width: 0.1rem;
+  height: 1rem;
+  background: #ffffff;
+  border-radius: 20%;
+  opacity: 1;
+  z-index: 7;
+}
+
+.rain1 {
+  left: 5rem;
+  top: 2rem;
+  animation: raining 2s linear infinite both;
+}
+
+.rain2 {
+  left: 15rem;
+  top: 10rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain3 {
+  left: 5rem;
+  top: 35rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain4 {
+  right: 23rem;
+  top: 6rem;
+  animation: raining 4s linear infinite both;
+}
+
+.rain5 {
+  left: 25rem;
+  top: 47rem;
+  animation: raining 3s linear infinite both -3s;
+}
+
+.rain6 {
+  right: 10rem;
+  top: 34rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain7 {
+  left: 34rem;
+  top: 10rem;
+  animation: raining 2s linear infinite both -5s;
+}
+
+.rain8 {
+  right: 25rem;
+  top: 40rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain9 {
+  right: 5rem;
+  top: 15.5rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain10 {
+  left: 24rem;
+  top: -4rem;
+  animation: raining 2s linear infinite both -3s;
+}
+
+@keyframes raining {
+  from {
+    transform: translateY(-1200px);
+  }
+  to {
+    transform: translateY(869px);
+  }
+}
+
+.wind {
+  position: absolute;
+  width: 10%;
+  height: 10px;
+  background: #ffffff;
+  opacity: 1;
+  z-index: 7;
+}
+
+.wind1 {
+  left: -10rem;
+  top: 4rem;
+  animation: windy 4s linear infinite both;
+}
+
+.wind2 {
+  left: -10rem;
+  top: 5rem;
+  width: 15%;
+  animation: windy 3s linear infinite both;
+}
+
+.wind3 {
+  left: -10rem;
+  top: 7rem;
+  animation: windy 3.5s linear infinite both;
+}
+
+.wind4 {
+  left: -10rem;
+  top: 12rem;
+  width: 12%;
+  animation: windy 5s linear infinite both;
+}
+
+.wind5 {
+  left: -10rem;
+  top: 15rem;
+  width: 15%;
+  animation: windy 3.5s linear infinite both;
+}
+
+.wind6 {
+  left: -10rem;
+  top: 17rem;
+  animation: windy 5s linear infinite both;
+}
+@keyframes windy {
+  to {
+    transform: translateX(120vw);
+  }
+}
