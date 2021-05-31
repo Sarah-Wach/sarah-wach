@@ -28,9 +28,18 @@
   <div class="slidecontainer ">
     <input type="range" value="0" min="0" max="100" class="slider distance">
   </div>
+  <div class="slidecontainer ">
+    <input type="range" value="0" min="0" max="100" class="slider parallax">
+  </div>
+
+  <!-- - - -  Fire 
+  <div id="Fire">
+    <img src="images/fire.png" width="150" height="90">
+  </div>
+-->
 
   <!-- - - - audio -->
-  <audio class="frogSound" loop preload="auto">
+  <audio class=" frogSound" loop preload="auto">
     <source src="sounds/frog.wav" type="audio/wav">
   </audio>
 
@@ -74,6 +83,7 @@
     var geometryRight = new THREE.PlaneGeometry(window.innerWidth / 2, window.innerHeight / 2);
     var circleGeometry = new THREE.CircleGeometry(window.innerWidth / 6, 60, 0);
     var starGeometry = new THREE.BufferGeometry();
+    var rainGeometry = new THREE.BufferGeometry();
     var vertices = [];
 
 
@@ -159,6 +169,18 @@
     }
     starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
 
+    // - - - Raining
+    for (let i = 0; i < 100; i++) {
+
+      var x = getRandomArbitrary(window.innerWidth / -2, window.innerWidth / 2);
+      var y = getRandomArbitrary(window.innerHeight / -3, window.innerHeight / 2);
+      var z = 5.5;
+
+      vertices.push(x, y, z);
+
+    }
+    rainGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
 
     // - - - Material
     var materialBackground = new THREE.MeshBasicMaterial({
@@ -168,6 +190,38 @@
       map: loader.load('images/bgDayForeground.png'),
       transparent: true
     });
+    var materialNightForeground = new THREE.MeshBasicMaterial({
+      map: loader.load('images/bgNightForeground.png'),
+      transparent: true
+    });
+    var materialFire = new THREE.MeshBasicMaterial({
+      map: loader.load('images/fire.png'),
+      transparent: true,
+    });
+    var materialTent = new THREE.MeshBasicMaterial({
+      map: loader.load('images/tent.png'),
+      transparent: true,
+    });
+    var materialNightTent = new THREE.MeshBasicMaterial({
+      map: loader.load('images/nightTent.png'),
+      transparent: true,
+    });
+    var materialMiddleHill = new THREE.MeshBasicMaterial({
+      map: loader.load('images/middleHill.png'),
+      transparent: true,
+    });
+    var materialMiddleHillNight = new THREE.MeshBasicMaterial({
+      map: loader.load('images/middleHillNight.png'),
+      transparent: true,
+    });
+    var materialTree = new THREE.MeshBasicMaterial({
+      map: loader.load('images/tree.png'),
+      transparent: true,
+    });
+    var materialNightTree = new THREE.MeshBasicMaterial({
+      map: loader.load('images/nightTree.png'),
+      transparent: true,
+    });
     var materialFog = new THREE.MeshBasicMaterial({
       map: loader.load('images/bgFog.png'),
       transparent: true
@@ -176,7 +230,6 @@
       map: loader.load('images/2.png'),
       alphaTest: 0.5,
     });
-
     var materialHillRight = new THREE.MeshBasicMaterial({
       map: loader.load('images/3.png'),
       alphaTest: 0.5,
@@ -185,18 +238,20 @@
       map: loader.load('images/bgNight.png'),
       transparent: true
     });
-    var materialNightForeground = new THREE.MeshBasicMaterial({
-      map: loader.load('images/bgNightForeground.png'),
-      transparent: true
-    });
     var materialCircle = new THREE.MeshBasicMaterial({
       map: loader.load('images/moon.png'),
       transparent: true
     });
-
     var materialStar = new THREE.PointsMaterial({
       map: loader.load('images/star.png'),
       color: '#ff0',
+      size: 10,
+      transparent: true,
+      alphaTest: 0.5
+    })
+    var materialRain = new THREE.PointsMaterial({
+      map: loader.load('images/star.png'),
+      color: '#ff00a81ab',
       size: 10,
       transparent: true,
       alphaTest: 0.5
@@ -208,69 +263,114 @@
     // - - - Mesh
     var background = new THREE.Mesh(geometry, materialBackground);
     var foreground = new THREE.Mesh(geometry, materialForeground);
-    var hill = new THREE.Mesh(geometryLeft, materialHill);
-    var hillRight = new THREE.Mesh(geometryRight, materialHillRight);
+    var nightForeground = new THREE.Mesh(geometry, materialNightForeground);
+    var fire = new THREE.Mesh(geometry, materialFire);
+    var tent = new THREE.Mesh(geometry, materialTent);
+    var nightTent = new THREE.Mesh(geometry, materialNightTree);
+    var middleHill = new THREE.Mesh(geometry, materialMiddleHill);
+    var middleHillNight = new THREE.Mesh(geometry, materialMiddleHillNight);
+    var tree = new THREE.Mesh(geometry, materialTree);
+    var nightTree = new THREE.Mesh(geometry, materialNightTree);
     var fog = new THREE.Mesh(geometry, materialFog);
     var night = new THREE.Mesh(geometry, materialNight);
-    var nightForeground = new THREE.Mesh(geometry, materialNightForeground);
+    var hill = new THREE.Mesh(geometryLeft, materialHill);
+    var hillRight = new THREE.Mesh(geometryRight, materialHillRight);
     var moon = new THREE.Mesh(circleGeometry, materialCircle);
     var starParticles = new THREE.Points(starGeometry, materialStar);
+    var rainParticles = new THREE.Points(rainGeometry, materialRain);
+
+
 
 
 
     // - - - Add to Scene
-    scene.add(background, foreground, fog, night, nightForeground, hill, hillRight, moon, starParticles);
-
+    scene.add(background, foreground, nightForeground, fire, tent, nightTent, middleHill, middleHillNight, tree, nightTree, fog, night, hill, hillRight, moon, starParticles);
+    // add rainParticles!
 
 
     // - - -  Position
-    camera.position.z = 12;
+    moon.position.y = 0;
+    hill.position.y = window.innerHeight / -3;
+    hillRight.position.y = window.innerHeight / -4;
+
     background.position.z = 1;
     night.position.z = 1;
-    foreground.position.z = 4;
-    nightForeground.position.z = 5;
-    hill.position.y = window.innerHeight / -3;
-    hill.position.z = 10;
-    hillRight.position.y = window.innerHeight / -4;
-    hillRight.position.z = 10;
-    fog.position.z = 3;
-    moon.position.z = 3;
-    moon.position.y = 0;
+    moon.position.z = 2;
+    middleHill.position.z = 3;
+    tree.position.z = 4;
+    fog.position.z = 5;
+    tent.position.z = 5;
+    foreground.position.z = 6;
+    nightForeground.position.z = 7;
+    fire.position.z = 8;
+    hill.position.z = 9;
+    hillRight.position.z = 9;
+    camera.position.z = 20;
+
 
 
     document.body.appendChild(renderer.domElement);
 
     // - - - Rendern
     function render() {
+
+      // - - - distance Slider
       var distance = document.querySelector('.distance').value / 100;
       hill.position.x = (window.innerWidth / -3) * (2 - distance);
       hillRight.position.x = (window.innerWidth / 4) * (2 - distance);
 
-
-
-      var distanceBackgroundPercentage = 1.1 - (distance / 10);
+      var distanceBackgroundPercentage = 1.2 - (distance / 20);
       background.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       foreground.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      nightForeground.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      nightForeground.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      tent.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      nightTent.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      middleHill.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      middleHillNight.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      fire.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      tree.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+      nightTree.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       fog.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       fog.opacity = 0.5;
       night.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
       night.opacity = 0.5;
-      nightForeground.scale.set(window.innerWidth * distanceBackgroundPercentage, window.innerHeight * distanceBackgroundPercentage);
+
+      //  Wind
+      var windDisplay = 'none';
+      if (distance >= 0.8) {
+        windDisplay = 'block';
+        windSound.setVolume(2);
+        campfireSound.setVolume(0);
+      } else {
+        windSound.setVolume(0);
+        campfireSound.setVolume(4);
+      }
 
 
+
+      // - - - parallax Slider
+      var parallaxEffect = document.querySelector('.parallax').value / 100;
+      tent.position.x = (window.innerWidth / 7) * (parallaxEffect * -1);
+      nightTent.position.x = (window.innerWidth / 7) * (parallaxEffect * -1);
+      fire.position.x = (window.innerWidth / 8) * (parallaxEffect * -1);
+      tree.position.x = (window.innerWidth / 11) * (parallaxEffect * -1);
+      nightTree.position.x = (window.innerWidth / 11) * (parallaxEffect * -1);
+      middleHill.position.x = (window.innerWidth / 20) * (parallaxEffect * -1);
+      middleHillNight.position.x = (window.innerWidth / 20) * (parallaxEffect * -1);
+      foreground.position.x = (window.innerWidth / 25) * (parallaxEffect * -1);
+      nightForeground.position.x = (window.innerWidth / 25) * (parallaxEffect * -1);
+      moon.position.x = (window.innerWidth / 70) * (parallaxEffect * -1);
+
+
+
+
+
+      // - - - fog Slider
       var fogPosition = document.querySelector('.fog').value / 100;
       fog.material.opacity = fogPosition;
 
-      var dayNightPosition = document.querySelector('.DayNight').value / 100;
-      //var nightPercentage = 1 - dayNightPosition / 340;
-      night.material.opacity = dayNightPosition;
-      nightForeground.material.opacity = dayNightPosition;
-      moon.material.opacity = dayNightPosition;
-      moon.position.y = (window.innerHeight / -4) * (2 - dayNightPosition);
-      starParticles.material.opacity = dayNightPosition;
-
-
-      // - - - Rain
+      //  Rain
       var rainDisplay = 'none';
       if (fogPosition >= 0.8) {
         rainDisplay = 'block';
@@ -283,16 +383,19 @@
         drop.style.display = rainDisplay;
       });
 
-      // - - - Wind
-      var windDisplay = 'none';
-      if (distance >= 0.8) {
-        windDisplay = 'block';
-        windSound.setVolume(2);
-        campfireSound.setVolume(0);
-      } else {
-        windSound.setVolume(0);
-        campfireSound.setVolume(4);
-      }
+
+
+
+      // - - - DayNight Slider
+      var dayNightPosition = document.querySelector('.DayNight').value / 100;
+      //var nightPercentage = 1 - dayNightPosition / 340;
+      night.material.opacity = dayNightPosition;
+      nightForeground.material.opacity = dayNightPosition;
+      moon.material.opacity = dayNightPosition;
+      moon.position.y = (window.innerHeight / -6) * (2 - dayNightPosition);
+      starParticles.material.opacity = dayNightPosition;
+
+
 
       document.querySelectorAll('.wind').forEach(function (bow) {
         bow.style.display = windDisplay;

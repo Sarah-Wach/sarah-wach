@@ -11,19 +11,42 @@ body {
 	bottom: 25px;
   left: 10%;
 }
-
+.DayNight::-webkit-slider-thumb{
+  background-image: url('images/sliderThumbO.png');
+  width: 25px;
+  height: 15px;
+}
 .fog{
 	bottom: 50px;
   left: 10%;
 }
 
+.fog::-webkit-slider-thumb{
+  background-image: url('images/sliderThumbP.png');
+  width: 25px;
+  height: 15px;
+}
 .distance{
 	bottom: 75px;
   left: 10%;
+  
 }
-.cloud{
+
+.distance::-webkit-slider-thumb{
+  background-image: url('images/sliderThumbL.png');
+  width: 25px;
+  height: 15px;
+}
+.parallax{
 	bottom: 100px;
-  left: 30%;
+  left: 10%;
+  
+}
+
+.parallax::-webkit-slider-thumb{
+  background-image: url('images/sliderThumbB.png');
+  width: 25px;
+  height: 15px;
 }
 
 
@@ -36,11 +59,12 @@ body {
   -webkit-appearance: none;
   width: 340px;
   height: 5px;
-  background: #ffffff;
+  background-image: url('images/slider.png');
+  background-image: transparent;
+  background-color: transparent;
   outline: none;
   opacity: 0.7;
   position: fixed;
-
   align-content: center;
 	justify-content: center;
   z-index: 10;
@@ -49,16 +73,14 @@ body {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #D115B8;
+  border-radius: 10%;
   cursor: pointer;
 }
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: 5px;
+  height: 15px;
   border-radius: 50%;
+  background-image: url('https://static.thenounproject.com/png/2181172-200.png');
   cursor: pointer;
 }
 /* new slider end */
