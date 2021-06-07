@@ -40,7 +40,7 @@
 
   <!-- - - - audio -->
   <audio class=" frogSound" loop preload="auto">
-    <source src="sounds/frog.wav" type="audio/wav">
+    <source src="sounds/frosch.wav" type="audio/wav">
   </audio>
 
 
@@ -69,6 +69,8 @@
 
     // Temporär
     (function () { var script = document.createElement('script'); script.onload = function () { var stats = new Stats(); document.body.appendChild(stats.dom); requestAnimationFrame(function loop() { stats.update(); requestAnimationFrame(loop) }); }; script.src = '//mrdoob.github.io/stats.js/build/stats.min.js'; document.head.appendChild(script); })()
+
+
 
 
     // - - - Geometrie
@@ -154,6 +156,9 @@
     myAudio.play();
 
 
+    // - - - panning Parallax
+
+
     // - - - Stars
     for (let i = 0; i < 100; i++) {
       var x = getRandomArbitrary(window.innerWidth / -2, window.innerWidth / 2);
@@ -234,8 +239,9 @@
       alphaTest: 0.5
     })
     var materialRain = new THREE.PointsMaterial({
-      map: loader.load('images/star.png'),
+      map: loader.load('images/rain.png'),
       color: '#00f',
+      opacity: 0.5,
       size: 10,
       transparent: true,
       alphaTest: 0.5
@@ -324,7 +330,7 @@
 
       //  Wind
       var windDisplay = 'none';
-      if (distance >= 0.8) {
+      if (distance >= 0.1) {
         windDisplay = 'block';
       }
 
@@ -348,17 +354,18 @@
 
       // - - - parallax Slider
       var parallaxEffect = document.querySelector('.parallax').value / 100;
-      tent.position.x = (window.innerWidth / 7) * (parallaxEffect * -1);
-      nightTent.position.x = (window.innerWidth / 7) * (parallaxEffect * -1);
-      fire.position.x = (window.innerWidth / 8) * (parallaxEffect * -1);
-      tree.position.x = (window.innerWidth / 11) * (parallaxEffect * -1);
-      nightTree.position.x = (window.innerWidth / 11) * (parallaxEffect * -1);
-      middleHill.position.x = (window.innerWidth / 20) * (parallaxEffect * -1);
-      middleHillNight.position.x = (window.innerWidth / 20) * (parallaxEffect * -1);
-      foreground.position.x = (window.innerWidth / 25) * (parallaxEffect * -1);
-      nightForeground.position.x = (window.innerWidth / 25) * (parallaxEffect * -1);
+      tent.position.x = (window.innerWidth / 12) * (parallaxEffect * -1);
+      nightTent.position.x = (window.innerWidth / 12) * (parallaxEffect * -1);
+      fire.position.x = (window.innerWidth / 13) * (parallaxEffect * -1);
+      tree.position.x = (window.innerWidth / 25) * (parallaxEffect * -1);
+      nightTree.position.x = (window.innerWidth / 25) * (parallaxEffect * -1);
+      middleHill.position.x = (window.innerWidth / 29) * (parallaxEffect * -1);
+      middleHillNight.position.x = (window.innerWidth / 29) * (parallaxEffect * -1);
+      foreground.position.x = (window.innerWidth / 35) * (parallaxEffect * -1);
+      nightForeground.position.x = (window.innerWidth / 35) * (parallaxEffect * -1);
       moon.position.x = (window.innerWidth / 70) * (parallaxEffect * -1);
-
+      //hill.position.x = (window.innerWidth / 70) * (parallaxEffect * -1);
+      //hillRight.position.x = (window.innerWidth / 70) * (parallaxEffect * -1);
 
 
 
@@ -374,7 +381,7 @@
         var difference = fogPosition - lastFogPosition;
         lastFogPosition = fogPosition;
 
-        for (var i = 0; i < difference * 200; i++) {
+        for (var i = 0; i < difference * 300; i++) {
           var x = getRandomArbitrary(window.innerWidth / -2, window.innerWidth / 2);
           var y = getRandomArbitrary(window.innerHeight, window.innerHeight / 2);
           var z = 5.5;
@@ -384,7 +391,7 @@
         }
 
         if (difference < 0) {
-          rainVertices = rainVertices.slice(0, rainVertices.length - ((difference * -1) * 200 * 3));
+          rainVertices = rainVertices.slice(0, rainVertices.length - ((difference * -1) * 300 * 3));
         }
 
         rainSound.setVolume(2 * fogPosition);
