@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>plane with texture</title>
+  <title>hills project</title>
   <style>
     body {
       margin: 0;
@@ -137,7 +137,7 @@
     });
 
     var campfireSoundLoader = new THREE.AudioLoader();
-    campfireSoundLoader.load('sounds/campfire.wav', function (buffer) {
+    campfireSoundLoader.load('sounds/fire-ambience.wav', function (buffer) {
       campfireSound.setBuffer(buffer);
       campfireSound.setLoop(true);
       campfireSound.setVolume(0);
@@ -153,6 +153,7 @@
     panNode.pan.value = -0.5;
     source.connect(panNode);
     panNode.connect(audioCtx.destination);
+    myAudio.volume = 0.2;
     myAudio.play();
 
 
@@ -339,10 +340,10 @@
 
         if (windDisplay == 'block') {
           windSound.setVolume(2);
-          campfireSound.setVolume(0);
+          campfireSound.setVolume(0.1);
         } else {
           windSound.setVolume(0);
-          campfireSound.setVolume(4);
+          campfireSound.setVolume(0.5);
         }
 
         document.querySelectorAll('.wind').forEach(function (bow) {
@@ -364,9 +365,6 @@
       foreground.position.x = (window.innerWidth / 35) * (parallaxEffect * -1);
       nightForeground.position.x = (window.innerWidth / 35) * (parallaxEffect * -1);
       moon.position.x = (window.innerWidth / 70) * (parallaxEffect * -1);
-      //hill.position.x = (window.innerWidth / 70) * (parallaxEffect * -1);
-      //hillRight.position.x = (window.innerWidth / 70) * (parallaxEffect * -1);
-
 
 
 
