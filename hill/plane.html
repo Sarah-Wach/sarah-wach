@@ -43,7 +43,13 @@
     <source src="sounds/frosch.wav" type="audio/wav">
   </audio>
 
-
+  <!-- - - - loading screen -->
+  <div class="loading-screen">
+    <div class="circle">
+      <div class="sun"></div>
+    </div>
+    <div class="rays"></div>
+  </div>
 
   <!-- - - - wind -->
   <div class="wind wind1"></div>
@@ -70,6 +76,11 @@
     // Temporär
     (function () { var script = document.createElement('script'); script.onload = function () { var stats = new Stats(); document.body.appendChild(stats.dom); requestAnimationFrame(function loop() { stats.update(); requestAnimationFrame(loop) }); }; script.src = '//mrdoob.github.io/stats.js/build/stats.min.js'; document.head.appendChild(script); })()
 
+
+    // - - - Loading Screen
+    THREE.DefaultLoadingManager.onLoad = function () {
+      document.querySelector('.loading-screen').style.display = 'none';
+    }
 
 
 
@@ -137,10 +148,10 @@
     });
 
     var campfireSoundLoader = new THREE.AudioLoader();
-    campfireSoundLoader.load('sounds/fire-ambience.wav', function (buffer) {
+    campfireSoundLoader.load('sounds/campfire.wav', function (buffer) {
       campfireSound.setBuffer(buffer);
       campfireSound.setLoop(true);
-      campfireSound.setVolume(0);
+      campfireSound.setVolume(1);
       campfireSound.play();
     });
 
@@ -237,7 +248,7 @@
       color: '#ff0',
       size: 10,
       transparent: true,
-      alphaTest: 0.5
+      alphaTest: 0.01
     })
     var materialRain = new THREE.PointsMaterial({
       map: loader.load('images/rain.png'),
@@ -302,7 +313,7 @@
     document.body.appendChild(renderer.domElement);
 
     var lastFogPosition = 0;
-    var lastWindDisplay = '';
+    var lastWindOpacity = -1;
 
     // - - - Rendern
     function render() {
@@ -330,24 +341,16 @@
       night.opacity = 0.5;
 
       //  Wind
-      var windDisplay = 'none';
-      if (distance >= 0.1) {
-        windDisplay = 'block';
-      }
+      var windOpacity = distance;
 
-      if (lastWindDisplay != windDisplay) {
-        lastWindDisplay = windDisplay;
+      if (lastWindOpacity != windOpacity) {
+        lastWindOpacity = windOpacity;
 
-        if (windDisplay == 'block') {
-          windSound.setVolume(2);
-          campfireSound.setVolume(0.1);
-        } else {
-          windSound.setVolume(0);
-          campfireSound.setVolume(0.5);
-        }
+        windSound.setVolume(distance * 2);
+        campfireSound.setVolume(1 - distance + 0.1);
 
         document.querySelectorAll('.wind').forEach(function (bow) {
-          bow.style.display = windDisplay;
+          bow.style.opacity = windOpacity;
         });
       }
 
@@ -376,27 +379,26 @@
 
       //  Rain
       if (fogPosition != lastFogPosition) {
-        var difference = fogPosition - lastFogPosition;
-        lastFogPosition = fogPosition;
+        var targetValue = fogPosition * 300;
 
-        for (var i = 0; i < difference * 300; i++) {
-          var x = getRandomArbitrary(window.innerWidth / -2, window.innerWidth / 2);
-          var y = getRandomArbitrary(window.innerHeight, window.innerHeight / 2);
-          var z = 5.5;
+        if (fogPosition > lastFogPosition) {
+          for (var i = rainVertices.length / 3; i < targetValue; i++) {
+            var x = getRandomArbitrary(window.innerWidth / -2, window.innerWidth / 2);
+            var y = getRandomArbitrary(window.innerHeight, window.innerHeight / 2);
+            var z = 5.5;
 
-          rainVertices.push(x, y, z);
-
-        }
-
-        if (difference < 0) {
-          rainVertices = rainVertices.slice(0, rainVertices.length - ((difference * -1) * 300 * 3));
+            rainVertices.push(x, y, z);
+          }
+        } else if (fogPosition < lastFogPosition) {
+          rainVertices = rainVertices.slice(0, targetValue * 3);
         }
 
         rainSound.setVolume(2 * fogPosition);
+        lastFogPosition = fogPosition;
       }
 
       for (var i = 1; i < rainVertices.length; i += 3) {
-        rainVertices[i] -= 10;
+        rainVertices[i] -= 20;
 
         if (rainVertices[i] < window.innerHeight / -2) {
           rainVertices[i] = window.innerHeight / 2;
