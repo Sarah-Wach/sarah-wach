@@ -74,7 +74,7 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Temporär
-    (function () { var script = document.createElement('script'); script.onload = function () { var stats = new Stats(); document.body.appendChild(stats.dom); requestAnimationFrame(function loop() { stats.update(); requestAnimationFrame(loop) }); }; script.src = '//mrdoob.github.io/stats.js/build/stats.min.js'; document.head.appendChild(script); })()
+    //(function () { var script = document.createElement('script'); script.onload = function () { var stats = new Stats(); document.body.appendChild(stats.dom); requestAnimationFrame(function loop() { stats.update(); requestAnimationFrame(loop) }); }; script.src = '//mrdoob.github.io/stats.js/build/stats.min.js'; document.head.appendChild(script); })()
 
 
     // - - - Loading Screen
@@ -167,8 +167,6 @@
     myAudio.volume = 0.2;
     myAudio.play();
 
-
-    // - - - panning Parallax
 
 
     // - - - Stars
