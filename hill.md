@@ -11,6 +11,6 @@ For the full experience, chrome is recommended.
 or watch the video:
 <p>
 <video width="contain" height="330" controls>
-  <source src="/assets/hill/screencast.mp4" type="video/mp4">
+  <source src="/hill/screencast.mp4" type="video/mp4">
 </video>
 </p>
