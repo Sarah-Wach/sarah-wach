@@ -8,7 +8,7 @@
   </a>
 </p>
 
-###  [*Hill project*](hill.md)
+###  [*the hill project*](hill.md)
 <br/>
 <br/>
 
